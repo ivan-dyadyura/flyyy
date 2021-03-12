@@ -1,0 +1,35 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;
+}
+
+body {
+	color: $main-text;
+	font-family: $main-font;
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 1.5;
+	letter-spacing: -0.02em;
+
+	background-color: $main-bg;
+}
+
+.container {
+	max-width: 1390px;
+	padding: 0 15px;
+	margin: 0 auto;
+}

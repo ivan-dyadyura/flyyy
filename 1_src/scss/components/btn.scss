@@ -1,0 +1,26 @@
+.btn {
+	position: relative;
+	padding: 24px 100px 24px 30px;
+
+	color: $secondary-text;
+	font-size: 15px;
+	text-transform: uppercase;
+
+	background-color: $accent-color;
+	border: none;
+	cursor: pointer;
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: 30px;
+		transform: translateY(-50%);
+
+		width: 28px;
+		height: 16px;
+
+		background-image: url(../img/svg/sprite1.svg#arrow-right);
+		background-size: contain;
+	}
+}

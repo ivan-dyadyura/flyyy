@@ -1,0 +1,72 @@
+.hero {
+	$text-color: $secondary-text;
+	$bg: $third-bg;
+
+	padding: 182px 0 290px;
+
+	color: $text-color;
+
+	background-color: $bg;
+
+	// .hero__inner
+
+	&__inner {
+		display: flex;
+	}
+
+	// .hero__content
+
+	&__content {
+	}
+
+	// .hero__title
+
+	&__title {
+		margin: 0 0 14px;
+
+		font-size: 17px;
+		font-weight: 400;
+	}
+
+	// .hero__subtitle
+
+	&__subtitle {
+		margin-bottom: 80px;
+
+		font-weight: 700;
+		font-size: 100px;
+		line-height: 1;
+		letter-spacing: -0.05em;
+	}
+
+	// .hero__btn
+
+	&__btn {
+	}
+
+	// .hero__decor
+
+	&__decor {
+		max-width: 227px;
+		margin-right: 60px;
+	}
+
+	// .hero__circle
+
+	&__circle {
+		margin-bottom: 15px;
+	}
+
+	// .hero__describe
+
+	&__describe {
+		margin: 0;
+
+		text-align: center;
+		line-height: 1.3;
+	}
+}
+.container {
+}
+.btn {
+}

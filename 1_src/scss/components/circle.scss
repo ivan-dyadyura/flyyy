@@ -1,0 +1,43 @@
+.circle {
+	position: relative;
+	display: inline-block;
+	user-select: none;
+
+	// .circle__image
+
+	&__image {
+		animation: infinite-spinning 4s infinite linear;
+	}
+
+	// .circle__center
+
+	&__center {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+
+		margin-top: -17%;
+		margin-left: -22%;
+	}
+}
+
+@keyframes infinite-spinning {
+	0% {
+		transform: rotate(0deg);
+	}
+	20% {
+		transform: rotate(72deg);
+	}
+	40% {
+		transform: rotate(144deg);
+	}
+	60% {
+		transform: rotate(216deg);
+	}
+	80% {
+		transform: rotate(288deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
