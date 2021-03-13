@@ -1,0 +1,65 @@
+.free-room {
+	$bg: $second-bg;
+
+	padding: 100px 0 140px;
+
+	background-color: $bg;
+
+	// .free-room__title
+
+	&__title {
+		max-width: 890px;
+		margin-bottom: 55px;
+
+		text-transform: uppercase;
+	}
+
+	// .free-room__inner
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	// .free-room__box
+
+	&__box {
+		width: 100%;
+		max-width: 370px;
+	}
+
+	// .free-room__list
+
+	&__list {
+		margin-bottom: 100px;
+	}
+
+	// .free-room__item
+
+	&__item {
+		font-size: 20px;
+		line-height: 1.25;
+
+		&:not(:last-child) {
+			margin-bottom: 65px;
+		}
+	}
+
+	// .free-room__btn
+
+	&__btn {
+	}
+
+	// .free-room__image
+
+	&__image {
+		margin-right: -80px;
+	}
+}
+.container {
+}
+.title-2 {
+}
+.btn {
+}

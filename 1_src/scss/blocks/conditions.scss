@@ -1,0 +1,81 @@
+.conditions {
+	$color: $secondary-text;
+
+	padding: 200px 0;
+
+	color: $color;
+
+	// .conditions__title
+
+	&__title {
+		display: flex;
+		align-items: center;
+		margin-bottom: 65px;
+
+		color: $color;
+
+		span {
+			max-width: 605px;
+			width: 100%;
+			margin-right: 75px;
+		}
+
+		&::after {
+			content: "";
+			width: 100%;
+			height: 100px;
+
+			background-image: url(../img/decor-petals.svg);
+			background-size: 60px 100px;
+			background-repeat: round space;
+		}
+	}
+
+	// .conditions__numbers
+
+	&__numbers {
+	}
+
+	// .conditions__item
+
+	&__item {
+	}
+
+	// .conditions__subtitle
+
+	&__subtitle {
+	}
+
+	// .conditions__value
+
+	&__value {
+	}
+
+	// .conditions__currency
+
+	&__currency {
+		// .conditions__currency--little
+
+		&--little {
+		}
+	}
+
+	// .conditions__heading
+
+	&__heading {
+	}
+
+	// .conditions__tariffs
+
+	&__tariffs {
+	}
+
+	// .conditions__tariff
+
+	&__tariff {
+	}
+}
+.container {
+}
+.title-2 {
+}

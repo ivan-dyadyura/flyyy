@@ -3,6 +3,7 @@
 	padding: 24px 100px 24px 30px;
 
 	color: $secondary-text;
+	font-weight: 500;
 	font-size: 15px;
 	text-transform: uppercase;
 
@@ -18,9 +19,10 @@
 		transform: translateY(-50%);
 
 		width: 28px;
-		height: 16px;
+		height: 28px;
 
 		background-image: url(../img/svg/sprite1.svg#arrow-right);
-		background-size: contain;
+		background-size: scale;
+		background-repeat: no-repeat;
 	}
 }
