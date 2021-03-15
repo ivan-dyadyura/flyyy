@@ -1,0 +1,174 @@
+.franchise-start {
+	$bg: $second-bg;
+
+	padding: 185px 0px 195px;
+
+	background-color: $bg;
+
+	// .franchise-start__row
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	// .franchise-start__title
+
+	&__title {
+		max-width: 650px;
+		margin-bottom: 70px;
+	}
+
+	// .franchise-start__term
+
+	&__term {
+		position: relative;
+
+		margin-right: 100px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 10%;
+			z-index: 0;
+			transform: skewX(-30deg);
+
+			width: 180px;
+			height: 230px;
+
+			border: 1px solid $red;
+			border-radius: 50%;
+		}
+	}
+
+	// .franchise-start__time
+
+	&__time {
+		position: relative;
+
+		font-weight: 700;
+		font-size: 84px;
+	}
+
+	// .franchise-start__category
+
+	&__category {
+		position: relative;
+
+		display: inline-block;
+		transform: rotate(180deg);
+		writing-mode: vertical-lr;
+
+		font-weight: 400;
+		font-size: 25px;
+		line-height: 1;
+		letter-spacing: normal;
+	}
+
+	// .franchise-start__text
+
+	&__text {
+		position: relative;
+
+		max-width: 246px;
+		margin: 0;
+
+		font-weight: 500;
+		font-size: 30px;
+		line-height: 1.16;
+	}
+
+	// .franchise-start__text
+
+	&__text {
+	}
+
+	// .franchise-start__stages
+
+	&__stages {
+	}
+
+	// .franchise-start__item
+
+	&__item {
+		position: relative;
+
+		display: flex;
+		justify-content: space-between;
+		padding-top: 70px;
+
+		border-top: 2px solid $white;
+
+		&:not(:last-child) {
+			margin-bottom: 75px;
+		}
+	}
+
+	// .franchise-start__subtitle
+
+	&__subtitle {
+		max-width: 450px;
+	}
+
+	// .franchise-start__btn
+
+	&__btn {
+		@include plus-icon(40px, 5px, $white, $accent-color);
+
+		&::after {
+			transform: scaleY(1) translateX(-50%);
+			transition: transform 0.3s;
+		}
+
+		// .franchise-start__btn--active
+
+		&--active {
+			&::after {
+				transform: scaleY(0) translateX(-50%);
+			}
+		}
+	}
+
+	// .franchise-start__list
+
+	&__list {
+		counter-reset: section;
+
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		max-width: 50%;
+	}
+
+	// .franchise-start__element
+
+	&__element {
+		position: relative;
+
+		max-width: 50%;
+		width: 100%;
+		margin-bottom: 60px;
+		padding-top: 76px;
+
+		&::before {
+			content: counter(section);
+			counter-increment: section;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			color: transparent;
+			font-weight: 800;
+			font-size: 50px;
+			-webkit-text-stroke: 1px rgba($white, 0.5);
+		}
+
+		&:nth-last-child(-n + 2) {
+			margin-bottom: 0;
+		}
+	}
+}
+.container {
+}

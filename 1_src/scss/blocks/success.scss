@@ -16,7 +16,37 @@
 	// .success__inner
 
 	&__inner {
+		position: relative;
+
 		display: flex;
+
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: -5%;
+			left: 0;
+			z-index: 5;
+
+			width: 122px;
+			height: 122px;
+
+			background-image: url(../img/svg/sprite1.svg#quote-start);
+			background-size: contain;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: -5%;
+			right: 0;
+			z-index: 5;
+
+			width: 122px;
+			height: 122px;
+
+			background-image: url(../img/svg/sprite1.svg#quote-end);
+			background-size: contain;
+		}
 	}
 
 	// .success__item
@@ -29,7 +59,7 @@
 		justify-content: center;
 		flex-direction: column;
 		width: 33.33%;
-		height: 26vw;
+		height: 500px;
 		padding-left: $padding-left;
 
 		&:first-child {
@@ -41,8 +71,8 @@
 			position: absolute;
 			left: 0;
 
-			width: 26vw;
-			height: 26vw;
+			width: 500px;
+			height: 500px;
 
 			background-color: $bg-color;
 			border: 2px solid var(--border-color);

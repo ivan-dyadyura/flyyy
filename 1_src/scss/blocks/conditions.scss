@@ -34,40 +34,159 @@
 	// .conditions__numbers
 
 	&__numbers {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
 	}
 
 	// .conditions__item
 
 	&__item {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 50px;
+
+		// .conditions__item--profit
+
+		&--profit {
+			padding-bottom: 50px;
+
+			border-bottom: 2px solid $color;
+		}
+
+		// .conditions__item--contribution
+
+		&--contribution {
+			width: 77%;
+		}
+
+		// .conditions__item--royalty
+
+		&--royalty {
+			.conditions__value {
+				&::after {
+					content: "%";
+					position: absolute;
+					top: 60px;
+					left: 35px;
+
+					color: $color;
+					font-size: 25px;
+				}
+			}
+		}
 	}
 
 	// .conditions__subtitle
 
 	&__subtitle {
+		font-weight: 500;
+		font-size: 20px;
+
+		// .conditions__subtitle--small
+
+		&--small {
+			font-size: 17px;
+		}
 	}
 
 	// .conditions__value
 
 	&__value {
+		position: relative;
+
+		margin-top: auto;
+
+		font-weight: 700;
+		font-size: 164px;
+		line-height: 1;
+		letter-spacing: -0.02em;
+
+		&::before {
+			content: var(--text);
+
+			position: absolute;
+			left: -6px;
+			bottom: -6px;
+			z-index: -1;
+
+			color: #ffffff;
+			text-shadow: 2px 2px 2px $color, -1px -1px 2px $color, 1px -1px 2px $color, -1px 1px 2px $color,
+				1px 1px 2px $color;
+		}
+
+		// .conditions__value--fz-large
+
+		&--fz-large {
+			font-size: 164px;
+		}
+
+		// .conditions__value--fz-middle
+
+		&--fz-middle {
+			font-size: 150px;
+		}
+
+		// .conditions__value--fz-little
+
+		&--fz-little {
+			font-size: 135px;
+		}
+	}
+
+	// .conditions__value-month
+
+	&__value-month {
+		position: relative;
+
+		font-size: 136px;
+		line-height: 1;
+		text-transform: uppercase;
+
+		&::before {
+			content: var(--text);
+
+			position: absolute;
+			left: -6px;
+			bottom: 7px;
+			z-index: -1;
+
+			color: #ffffff;
+			text-shadow: 2px 2px 2px $color, -1px -1px 2px $color, 1px -1px 2px $color, -1px 1px 2px $color,
+				1px 1px 2px $color;
+		}
 	}
 
 	// .conditions__currency
 
 	&__currency {
+		font-size: 68px;
+		line-height: 1;
+		text-shadow: none;
+
 		// .conditions__currency--little
 
 		&--little {
+			font-size: 34px;
 		}
 	}
 
 	// .conditions__heading
 
 	&__heading {
+		margin-bottom: 25px;
+
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 1;
+		text-transform: uppercase;
 	}
 
 	// .conditions__tariffs
 
 	&__tariffs {
+		display: flex;
+		justify-content: space-between;
 	}
 
 	// .conditions__tariff

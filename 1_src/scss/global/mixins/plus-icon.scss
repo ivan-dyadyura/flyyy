@@ -1,0 +1,58 @@
+@mixin plus-icon ($size, $weight, $color, $hover-color) {
+	position: absolute;
+	top: 80px;
+	right: 0;
+	z-index: 2;
+
+	width: $size;
+	height: $size;
+
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	outline: transparent;
+
+	transition: 0.3s transform;
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+
+		width: 100%;
+		height: $weight;
+
+		background-color: $color;
+
+		transition: 0.3s background-color;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: 0;
+		transform: translateX(-50%);
+
+		display: inline-block;
+		width: $weight;
+		height: 100%;
+
+		background-color: $color;
+
+		transition: 0.3s background-color;
+	}
+
+	&:hover {
+		&::before,
+		&::after {
+			background-color: $hover-color;
+		}
+	}
+
+	&:focus {
+		transform: scale(1.2);
+	}
+}

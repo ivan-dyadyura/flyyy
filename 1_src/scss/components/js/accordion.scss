@@ -1,0 +1,28 @@
+.js-accordion {
+
+	// .js-accordion__btn
+
+	&__btn {
+	
+	}
+
+	// .js-accordion__contnet
+
+	&__content {
+		max-height: 0px;
+		overflow: hidden;
+
+		transition: max-height 0.8s linear;
+
+		// .js-accordion__contnet--active
+
+		&--active {
+			max-height: 1280px;
+			transition: max-height 1s linear;
+		}
+	}
+
+	// .js-accordion__content
+
+	&__content {}
+}

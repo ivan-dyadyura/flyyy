@@ -236,7 +236,7 @@ const scriptsBuild = () => {
 		.pipe(dest('./app/js'))
 }
 
-exports.build = series(clean, parallel(htmlInclude, scriptsBuild, fonts, resources, imgToApp, svgSprites), stylesBuild, htmlMinify, tinypng)
+exports.build = series(clean, parallel(htmlInclude, scriptsBuild, fonts, resources, imgToApp, svgSprites), stylesBuild, tinypng)
 
 const deploy = () => {
 	let conn = ftp.create({
@@ -255,8 +255,8 @@ const deploy = () => {
 			base: '',
 			buffer: false
 		})
-		.pipe(conn.newer('portfolio/wawe/')) // only upload newer files
-		.pipe(conn.dest('portfolio/wawe/'))
+		.pipe(conn.newer('flyyy/')) // only upload newer files
+		.pipe(conn.dest('flyyy/'))
 }
 
 exports.deploy = deploy

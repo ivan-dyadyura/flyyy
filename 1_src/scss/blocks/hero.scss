@@ -1,17 +1,32 @@
 .hero {
-	$text-color: $secondary-text;
+	$color: $secondary-text;
 	$bg: $third-bg;
+
+	position: relative;
 
 	padding: 182px 0 290px;
 
-	color: $text-color;
+	color: $color;
 
 	background-color: $bg;
+
+
 
 	// .hero__inner
 
 	&__inner {
+		position: relative;
+		z-index: 2;
+
 		display: flex;
+
+		&::before {
+			content: url(../img/hero/decor.png);
+	
+			position: absolute;
+			right: -13.5%;
+			top: 40%;
+		}
 	}
 
 	// .hero__content
@@ -33,9 +48,7 @@
 	&__subtitle {
 		margin-bottom: 80px;
 
-		font-weight: 700;
-		font-size: 100px;
-		line-height: 1;
+		color: $color;
 		letter-spacing: -0.05em;
 	}
 

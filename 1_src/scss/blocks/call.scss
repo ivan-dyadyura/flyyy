@@ -1,0 +1,58 @@
+.call {
+	$color: $secondary-text;
+
+	padding: 150px 0 190px;
+
+	color: $color;
+
+	// .call__inner
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	// .call__image
+
+	&__image {
+		max-width: 460px;
+		margin-left: 70px;
+	}
+
+	// .call__content
+
+	&__content {
+		max-width: 710px;
+	}
+
+	// .call__title
+
+	&__title {
+		margin-bottom: 40px;
+
+		color: $color;
+		line-height: 1.08;
+	}
+
+	// .call__text
+
+	&__text {
+		max-width: 265px;
+		margin: 0 0 60px;
+	}
+
+	// .call__btn
+
+	&__btn {
+		max-width: 340px;
+		width: 100%;
+		text-align: left;
+	}
+}
+.container {
+}
+.title {
+}
+.btn {
+}
