@@ -152,7 +152,7 @@
 		padding-top: 76px;
 
 		&::before {
-			content: counter(section);
+			content: counter(section) ".";
 			counter-increment: section;
 
 			position: absolute;

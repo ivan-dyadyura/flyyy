@@ -1,0 +1,290 @@
+.education-center {
+	$bg: $second-bg;
+	$color: #f96040;
+	$color-2: $secondary-text;
+
+	padding: 200px 0;
+	overflow: hidden;
+
+	background-color: $bg;
+	// .education-center__title
+
+	&__title {
+		display: flex;
+		margin-bottom: 100px;
+
+		span {
+			max-width: 1130px;
+			width: 100%;
+			margin-right: 25px;
+		}
+
+		&::after {
+			content: "";
+			width: 100%;
+			max-width: 200px;
+
+			background-image: url(../img/franschise/education-decor.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+	}
+
+	// .education-center__value
+
+	&__value {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 90px;
+	}
+
+	// .education-center__value-row
+
+	&__value-row {
+		display: flex;
+		flex-direction: column;
+		max-width: 350px;
+
+		justify-content: space-between;
+	}
+
+	// .education-center__number
+
+	&__number {
+		position: relative;
+
+		display: inline-block;
+
+		font-weight: 700;
+		font-size: 485px;
+		line-height: 0.85;
+		letter-spacing: 0.02em;
+
+		span {
+			position: relative;
+			z-index: 3;
+
+			display: inline-block;
+		}
+
+		&::after {
+			content: var(--text);
+
+			position: absolute;
+			left: -15px;
+			bottom: -10px;
+			z-index: 0;
+
+			color: $color-2;
+			text-shadow: 2px 2px 2px $color, -1px -1px 2px $color, 1px -1px 2px $color, -1px 1px 2px $color,
+				1px 1px 2px $color;
+		}
+	}
+
+	// .education-center__index
+
+	&__index {
+		position: relative;
+		top: auto;
+
+		display: inline-block;
+
+		font-weight: 700;
+		font-size: 150px;
+		line-height: 1;
+		text-transform: uppercase;
+
+		span {
+			position: relative;
+			z-index: 3;
+		}
+
+		&::after {
+			content: var(--text);
+
+			position: absolute;
+			left: -11px;
+			bottom: -7px;
+			z-index: 0;
+
+			color: $color-2;
+			text-shadow: 2px 2px 2px $color, -1px -1px 2px $color, 1px -1px 2px $color, -1px 1px 2px $color,
+				1px 1px 2px $color;
+		}
+	}
+
+	// .education-center__text
+
+	&__text {
+		margin: 0;
+
+		font-weight: 700;
+		font-size: 50px;
+		line-height: 1.2;
+	}
+
+	// .education-center__list
+
+	&__list {
+		counter-reset: section;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 110px;
+	}
+
+	// .education-center__item
+
+	&__item {
+		position: relative;
+
+		padding-top: 75px;
+
+		font-weight: 500;
+		font-size: 17px;
+		line-height: 1.35;
+		max-width: 340px;
+
+		&::before {
+			content: counter(section) ".";
+			counter-increment: section;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			color: transparent;
+			font-weight: 800;
+			font-size: 50px;
+			-webkit-text-stroke: 1px rgba($white, 0.5);
+		}
+
+		&:not(:nth-child(3n)) {
+			&::after {
+				content: "";
+				position: absolute;
+				top: 10px;
+				right: -100px;
+				transform: rotate(13deg);
+
+				height: 100%;
+				width: 2px;
+
+				background-color: #f96040;
+			}
+		}
+	}
+
+	// .education-center__slider
+
+	&__slider {
+		margin-right: -700px;
+	}
+
+	// .education-center__wrapper
+
+	&__wrapper {
+		margin-bottom: 100px;
+	}
+
+
+	// .education-center__slide
+
+	&__slide {
+		width: 416px;
+
+		&:last-child {
+			margin-right: 700px;
+		}
+	}
+
+	// .education-center__image
+
+	&__image {
+		width: 100%;
+		height: 574px;
+
+		object-fit: cover;
+	}
+
+	// .education-center__row
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 1360px;
+	}
+
+	// .education-center__nav
+
+	&__nav {
+		width: 65px;
+		height: 65px;
+		padding: 0;
+
+		font-size: 0;
+
+		background-color: transparent;
+		background-size: contain;
+		background-repeat: no-repeat;
+		border: none;
+		cursor: pointer;
+		outline: transparent;
+
+		// .education-center__nav--prev
+
+		&--prev {
+			background-image: url(../img/svg/sprite1.svg#arr-left);
+		}
+
+		// .education-center__nav--next
+
+		&--next {
+			background-image: url(../img/svg/sprite1.svg#arr-right);
+			margin-right: auto;
+			margin-left: 55px;
+		}
+	}
+
+	// .education-center__scrollbar
+
+	&__scrollbar {
+		max-width: 450px;
+		width: 100%;
+		height: 3px;
+
+		background-color: rgba(#fff, 0.15);
+
+		.swiper-scrollbar-drag {
+			height: 100%;
+			background-color: #fff;
+			cursor: pointer;
+		}
+	}
+
+	// .education-center__btn
+
+	&__btn {
+		margin-left: auto;
+	}
+}
+.container {
+}
+.title-2 {
+}
+.swiper-container {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}
+.swiper-scrollbar {
+}
+.btn {
+}
