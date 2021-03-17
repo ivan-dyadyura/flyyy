@@ -1,0 +1,119 @@
+.qna {
+	$bg: $second-bg;
+
+	padding: 190px 0px 55px;
+
+	background-color: $bg;
+
+	// .qna__inner
+
+	&__inner {
+		position: relative;
+
+		padding-left: 345px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 10px;
+			bottom: 0;
+
+			width: 210px;
+			height: 100%;
+
+			background-image: url(../img/decor-petals-qna.svg);
+			background-repeat: repeat-y;
+		}
+	}
+
+	// .qna__title
+
+	&__title {
+		max-width: 800px;
+		margin-bottom: 100px;
+	}
+
+	// .qna__list
+
+	&__list {
+	}
+
+	// .qna__item
+
+	&__item {
+		&:not(:last-child) {
+			border-bottom: 2px solid #fff;
+		}
+	}
+
+	// .qna__row
+
+	&__row {
+		position: relative;
+	}
+
+	// .qna__subtitle
+
+	&__subtitle {
+		max-width: 601px;
+		margin-top: 50px;
+		padding-bottom: 50px;
+
+		font-weight: 700;
+		font-size: 30px;
+		line-height: 1.17;
+	}
+
+	// .qna__btn
+
+	&__btn {
+		@include plus-icon(40px, 5px, $white, $accent-color);
+		right: 0;
+		top: 0;
+
+		&::after {
+			transform: scaleY(1) translateX(-50%);
+			transition: transform 0.3s;
+		}
+
+		// .franchise-start__btn--active
+
+		&.active {
+			&::after {
+				transform: scaleY(0) translateX(-50%);
+			}
+		}
+	}
+
+	// .qna__content
+
+	&__content {
+		font-size: 17px;
+		line-height: 1.76;
+
+		p {
+			margin: 0;
+			padding-bottom: 50px;
+		}
+	}
+}
+.container {
+}
+.title-2 {
+}
+.js-accordion {
+	// .js-accordion__btn
+
+	&__btn {
+	}
+
+	// .js-accordion__content
+
+	&__content {
+		// .js-accordion__content--active
+
+		&--active {
+		}
+	}
+}

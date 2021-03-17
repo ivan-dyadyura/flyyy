@@ -123,7 +123,7 @@
 
 		// .franchise-start__btn--active
 
-		&--active {
+		&.active {
 			&::after {
 				transform: scaleY(0) translateX(-50%);
 			}

@@ -1,0 +1,85 @@
+// Checkbox style ====================================
+
+.tm-checkbox {
+	$border-color: $secondary-text;
+	$accent: $accent-color;
+
+	position: relative;
+	z-index: 10;
+
+	display: block;
+
+	// .tm-checkbox__input
+
+	&__input {
+		position: absolute;
+
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+
+		&:checked {
+			& + .tm-checkbox__box {
+				&::after {
+					transform: scale(1);
+				}
+			}
+		}
+
+		&:focus {
+			& + .tm-checkbox__box {
+				border-color: $accent;
+
+				&::after {
+					background-color: $accent;
+				}
+			}
+		}
+
+		&:disabled {
+			& + .tm-checkbox__box {
+			}
+		}
+
+		&:checked:disabled {
+			// Some style
+		}
+	}
+
+	// .tm-checkbox__box
+
+	&__box {
+		box-sizing: border-box;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		vertical-align: middle;
+
+		width: 25px;
+		height: 25px;
+
+		background-color: #fff;
+		border: 2px solid $border-color;
+		cursor: pointer;
+
+		transition-property: border-color;
+		transition-duration: 0.3s;
+
+		&::after {
+			content: "";
+			position: relative;
+			left: 0;
+			top: 0;
+			transform: scale(0);
+
+			width: 11px;
+			height: 11px;
+
+			background-color: $border-color;
+
+			transition-property: background-color, transform;
+			transition-duration: 0.3s;
+		}
+	}
+}

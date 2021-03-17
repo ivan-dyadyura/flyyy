@@ -1,0 +1,65 @@
+.form {
+	$color: $secondary-text;
+
+	display: flex;
+	flex-direction: column;
+	max-width: 679px;
+	width: 100%;
+	padding: 60px 77px;
+
+	background-color: #fff;
+
+	// .form__title
+
+	&__title {
+		margin-bottom: 30px;
+
+		color: $color;
+		font-weight: 700;
+		font-size: 42px;
+		line-height: 1;
+	}
+
+	// .form__label
+
+	&__label {
+		margin-bottom: 30px;
+	}
+
+	// .form__filed
+
+	&__filed {
+		
+	}
+
+	// .form__processing
+
+	&__processing {
+		margin-bottom: 50px;
+
+		color: $color;
+		font-size: 15px;
+		line-height: 1.33;
+	}
+
+	// .form__checkbox
+
+	&__checkbox {
+		margin-right: 25px;
+	}
+
+	// .form__processing-text
+
+	&__processing-text {
+		a {
+			color: $color;
+			border-bottom: 1px solid $color;
+		}
+	}
+
+	// .form__btn
+
+	&__btn {
+		text-align: left;
+	}
+}

@@ -1,0 +1,70 @@
+.form-block {
+	$bg: $accent-color;
+	$color: $secondary-text;
+
+	background-color: $bg;
+
+	background-image: url(../img/form-block-bg-decor.png);
+	background-repeat: no-repeat;
+	background-size: 1920px;
+
+	// .form-block__inner
+
+	&__inner {
+		position: relative;
+
+		display: flex;
+		justify-content: space-between;
+		padding: 100px 0 110px;
+
+		&::before {
+			content: url(../img/form-decor-1.png);
+			position: absolute;
+			left: -30px;
+			bottom: -160px;
+		}
+
+		&::after {
+			content: url(../img/form-decor-2.png);
+			position: absolute;
+			right: -280px;
+			top: -230px;
+		}
+	}
+
+	// .form-block__title
+
+	&__title {
+		max-width: 470px;
+
+		color: $color;
+		font-weight: 700;
+		font-size: 62px;
+		line-height: 1;
+		letter-spacing: -0.06em;
+
+		span {
+			display: block;
+			margin-bottom: 30px;
+			font-size: 40px;
+			line-height: 1;
+			letter-spacing: -0.04em;
+		}
+	}
+
+	// .form-block__form
+
+	&__form {}
+}
+.container {
+}
+.tm-field {
+}
+.tm-checkbox {
+}
+.btn {
+
+	// .btn--transparent
+
+	&--transparent {}
+}

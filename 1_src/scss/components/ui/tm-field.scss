@@ -1,0 +1,34 @@
+.tm-field {
+	$accent: $accent-color;
+	$border-color: $secondary-text;
+	$color: $secondary-text;
+
+	display: block;
+
+	// .tm-field__input
+
+	&__input {
+		display: block;
+		width: 100%;
+		padding: 20px 10px 20px 0px;
+
+		font-weight: 500;
+		color: $color;
+
+		border: none;
+		border-bottom: 1px solid $border-color;
+		outline: transparent;
+
+		transition: border-color 0.3s;
+
+		&:focus {
+			border-color: $accent;
+		}
+
+		&::placeholder {
+			font-weight: 400;
+			color: $color;
+		}
+
+	}
+}

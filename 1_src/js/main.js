@@ -1,7 +1,7 @@
 import accordion from './components/accordion'
 import {Swiper, Navigation, Scrollbar} from 'swiper'
 
-accordion('.js-accordion', '.js-accordion__btn', '.js-accordion__content', 'js-accordion__content--active', 'franchise-start__btn--active')
+accordion('.js-accordion', '.js-accordion__btn', '.js-accordion__content', 'js-accordion__content--active')
 
 Swiper.use([Navigation, Scrollbar])
 

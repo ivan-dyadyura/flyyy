@@ -31,6 +31,8 @@ img {
 }
 
 body {
+	overflow-x: hidden;
+
 	color: $main-text;
 	font-family: $main-font;
 	font-weight: 400;

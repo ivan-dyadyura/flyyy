@@ -5,7 +5,11 @@
 @import "global/global.scss";
 @import "global/sprite.scss";
 
-@import "components/btn.scss";
+@import "components/ui/tm-field.scss";
+@import "components/ui/btn.scss";
+@import "components/ui/tm-checkbox.scss";
+@import "components/ui/form.scss";
+
 @import "components/circle.scss";
 @import "components/menu.scss";
 @import "components/logo.scss";
@@ -21,4 +25,9 @@
 @import "blocks/call.scss";
 @import "blocks/team.scss";
 @import "blocks/education-center.scss";
+@import "blocks/form-block.scss";
+@import "blocks/qna.scss";
+@import "blocks/contacts.scss";
+
+
 
