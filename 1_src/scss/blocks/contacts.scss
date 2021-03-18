@@ -1,7 +1,7 @@
 .contacts {
 	$bg: $second-bg;
 
-	padding: 90px 70px;
+	padding: 90px 70px 70px;
 
 	background-color: $bg;
 
@@ -10,6 +10,7 @@
 	&__row {
 		display: flex;
 		flex-wrap: wrap;
+		margin-bottom: 70px;
 
 		&:first-child {
 			margin-bottom: 115px;
@@ -120,19 +121,41 @@
 
 	// .contacts__list
 
-	&__list {}
+	&__list {
+		display: flex;
+	}
 
 	// .contacts__item
 
-	&__item {}
+	&__item {
+		&:not(:last-child) {
+			margin-right: 120px;
+		}
+	}
 
 	// .contacts__name
 
-	&__name {}
+	&__name {
+		margin-bottom: 20px;
+	}
 
 	// .contacts__value
 
-	&__value {}
+	&__value {
+		font-weight: 700;
+		font-size: 25px;
+		line-height: 1;
+
+		a {
+			color: inherit;
+
+			transition: color 0.25s;
+
+			&:hover {
+				color: $accent-color;
+			}
+		}
+	}
 }
 .container {
 }
