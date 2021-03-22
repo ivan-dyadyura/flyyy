@@ -49,6 +49,7 @@
 		// .conditions__item--profit
 
 		&--profit {
+			width: 100%;
 			padding-bottom: 50px;
 
 			border-bottom: 2px solid $color;
@@ -72,6 +73,18 @@
 
 					color: $color;
 					font-size: 25px;
+
+					@media (max-width: $elg) {
+						top: 43px;
+						left: 22px;
+					}
+
+					@media (max-width: $lg) {
+						top: 42px;
+						left: 20px;
+
+						font-size: 20px;
+					}
 				}
 			}
 		}
@@ -98,7 +111,6 @@
 		margin-top: auto;
 
 		font-weight: 700;
-		font-size: 164px;
 		line-height: 1;
 		letter-spacing: -0.02em;
 
@@ -119,18 +131,42 @@
 
 		&--fz-large {
 			font-size: 164px;
+
+			@media (max-width: $elg) {
+				font-size: 130px;
+			}
+
+			@media (max-width: $lg) {
+				font-size: 110px;
+			}
 		}
 
 		// .conditions__value--fz-middle
 
 		&--fz-middle {
 			font-size: 150px;
+
+			@media (max-width: $elg) {
+				font-size: 135px;
+			}
+
+			@media (max-width: $lg) {
+				font-size: 100px;
+			}
 		}
 
 		// .conditions__value--fz-little
 
 		&--fz-little {
 			font-size: 135px;
+
+			@media (max-width: $elg) {
+				font-size: 100px;
+			}
+
+			@media (max-width: $lg) {
+				font-size: 90px;
+			}
 		}
 	}
 
@@ -142,6 +178,14 @@
 		font-size: 136px;
 		line-height: 1;
 		text-transform: uppercase;
+
+		@media (max-width: $elg) {
+			font-size: 110px;
+		}
+
+		@media (max-width: $lg) {
+			font-size: 80px;
+		}
 
 		&::before {
 			content: var(--text);
@@ -192,6 +236,24 @@
 	// .conditions__tariff
 
 	&__tariff {
+	}
+
+	// .conditions__signature
+
+	&__signature {
+		position: relative;
+		margin-top: 15px;
+		padding-left: 18px;
+
+		font-weight: 500;
+		font-size: 20px;
+
+		&::before {
+			content: "*";
+			position: absolute;
+			left: 0;
+			top: 3px;
+		}
 	}
 }
 .container {

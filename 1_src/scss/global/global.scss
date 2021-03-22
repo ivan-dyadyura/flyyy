@@ -46,13 +46,9 @@ body {
 }
 
 .container {
-	max-width: 1390px;
-	padding: 0 15px;
+	max-width: 1400px;
+	padding: 0 20px;
 	margin: 0 auto;
-
-	@media (max-width: $sm) {
-		padding: 0 20px;
-	}
 }
 
 .title {

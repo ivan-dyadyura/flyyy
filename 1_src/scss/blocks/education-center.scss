@@ -27,6 +27,10 @@
 			background-image: url(../img/franschise/education-decor.svg);
 			background-repeat: no-repeat;
 			background-size: contain;
+
+			@media (max-width: $sm) {
+				display: none;
+			}
 		}
 	}
 
@@ -34,8 +38,21 @@
 
 	&__value {
 		display: flex;
+		align-items: flex-start;
 		justify-content: space-between;
 		margin-bottom: 90px;
+
+		@media (max-width: $elg) {
+			justify-content: flex-start;
+		}
+
+		@media (max-width: $sm) {
+			position: relative;
+			// display: inline-flex;
+			flex-direction: column;
+			max-width: max-content;
+			margin: 0 auto 40px;
+		}
 	}
 
 	// .education-center__value-row
@@ -60,6 +77,20 @@
 		line-height: 0.85;
 		letter-spacing: 0.02em;
 
+		@media (max-width: $elg) {
+			font-size: 350px;
+			margin-right: 40px;
+		}
+
+		@media (max-width: $lg) {
+			font-size: 250px;
+		}
+
+		@media (max-width: $sm) {
+			margin-bottom: 25px;
+			font-size: 144px;
+		}
+
 		span {
 			position: relative;
 			z-index: 3;
@@ -78,6 +109,11 @@
 			color: $color-2;
 			text-shadow: 2px 2px 2px $color, -1px -1px 2px $color, 1px -1px 2px $color, -1px 1px 2px $color,
 				1px 1px 2px $color;
+
+				@media (max-width: $sm) {
+					left: -5px;
+					bottom: -3px;
+				}
 		}
 	}
 
@@ -88,11 +124,30 @@
 		top: auto;
 
 		display: inline-block;
+		margin-top: 20px;
+		margin-bottom: 83px;
 
 		font-weight: 700;
 		font-size: 150px;
 		line-height: 1;
 		text-transform: uppercase;
+
+		@media (max-width: $elg) {
+			font-size: 100px;
+			margin-bottom: 33px;
+		}
+
+		@media (max-width: $elg) {
+			font-size: 70px;
+		}
+
+		@media (max-width: $sm) {
+			position: absolute;
+			top: 37px;
+			right: 81px;
+			
+			font-size: 20px;
+		}
 
 		span {
 			position: relative;
@@ -110,6 +165,11 @@
 			color: $color-2;
 			text-shadow: 2px 2px 2px $color, -1px -1px 2px $color, 1px -1px 2px $color, -1px 1px 2px $color,
 				1px 1px 2px $color;
+
+				@media (max-width: $sm) {
+					left: -2px;
+					bottom: -1px;
+				}
 		}
 	}
 
@@ -121,6 +181,20 @@
 		font-weight: 700;
 		font-size: 50px;
 		line-height: 1.2;
+
+		@media (max-width: $elg) {
+			font-size: 40px;
+		}
+
+		@media (max-width: $lg) {
+			max-width: 230px;
+			font-size: 25px;
+		}
+
+		@media (max-width: $sm) {
+			font-size: 18px;
+			max-width: 100%;
+		}
 	}
 
 	// .education-center__list
@@ -129,9 +203,18 @@
 		counter-reset: section;
 
 		display: flex;
-		align-items: center;
 		justify-content: space-between;
 		margin-bottom: 110px;
+
+		@media (max-width: $md) {
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+
+		@media (max-width: $sm) {
+			flex-direction: column;
+			justify-content: flex-start;
+		}
 	}
 
 	// .education-center__item
@@ -146,6 +229,25 @@
 		line-height: 1.35;
 		max-width: 340px;
 
+		@media (max-width: $lg) {
+			max-width: 300px;
+		}
+
+		@media (max-width: $md) {
+			margin: 0 15px;
+			font-size: 14px;
+		}
+
+		@media (max-width: $sm) {
+			margin: 0;
+			padding-top: 0;
+			padding-left: 35px;
+		}
+
+		@media (max-width: $xs) {
+			font-size: 11px;
+		}
+
 		&::before {
 			content: counter(section) ".";
 			counter-increment: section;
@@ -158,6 +260,10 @@
 			font-weight: 800;
 			font-size: 50px;
 			-webkit-text-stroke: 1px rgba($white, 0.5);
+
+			@media (max-width: $sm) {
+				font-size: 30px;
+			}
 		}
 
 		&:not(:nth-child(3n)) {
@@ -172,7 +278,19 @@
 				width: 2px;
 
 				background-color: #f96040;
+
+				@media (max-width: $elg) {
+					right: -70px;
+				}
+
+				@media (max-width: $lg) {
+					display: none;
+				}
 			}
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 35px;
 		}
 	}
 
