@@ -1,5 +1,6 @@
 html {
 	box-sizing: border-box;
+	overflow-x: hidden;
 }
 
 *,
@@ -48,6 +49,10 @@ body {
 	max-width: 1390px;
 	padding: 0 15px;
 	margin: 0 auto;
+
+	@media (max-width: $sm) {
+		padding: 0 20px;
+	}
 }
 
 .title {
@@ -60,6 +65,22 @@ body {
 	@media (max-width: $full) {
 		font-size: 75px;
 	}
+
+	@media (max-width: $lg) {
+		font-size: 60px;
+	}
+
+	@media (max-width: $md) {
+		font-size: 50px;
+	}
+
+	@media (max-width: $sm) {
+		font-size: 40px;
+	}
+
+	@media (max-width: $xs) {
+		font-size: 28px;
+	}
 }
 
 .title-2 {
@@ -68,4 +89,16 @@ body {
 	font-size: 60px;
 	line-height: 1;
 	letter-spacing: -0.03em;
+
+	@media (max-width: $lg) {
+		font-size: 50px;
+	}
+
+	@media (max-width: $md) {
+		font-size: 40px;
+	}
+
+	@media (max-width: $xs) {
+		font-size: 28px;
+	}
 }

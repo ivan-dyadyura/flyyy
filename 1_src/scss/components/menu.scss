@@ -10,11 +10,16 @@
 
 	width: 220px;
 
+	font-size: 15px;
+
 	border-right: 1px solid rgba(#fff, 0.15);
+	mix-blend-mode: multiply;
 
 	@media (max-width: $full) {
 		left: auto;
-		right: 0;
+		right: -100%;
+
+		mix-blend-mode: normal;
 	}
 
 	// .menu__inner
@@ -33,10 +38,17 @@
 		overflow-x: hidden;
 	
 		background-color: transparent;
-		mix-blend-mode: multiply;
+		// mix-blend-mode: multiply;
+
+		transition: right 0.35s;
 
 		@media (max-width: $full) {
-			display: none;
+			right: -100%;
+			left: auto;
+
+			width: 320px;
+			max-width: 100%;
+			padding: 73px 60px;
 
 			background-color: #fff;
 		}
@@ -50,7 +62,9 @@
 		}
 
 		&.active {
-			display: block;
+			@media (max-width: $full) {
+				right: 0;
+			}
 		}
 	}
 
@@ -58,6 +72,18 @@
 
 	&__logo {
 		margin-bottom: 105px;
+
+		@media (max-width: $full) {
+			position: fixed;
+			top: 40px;
+			left: 35px;
+		}
+
+		img {
+			@media (max-width: $xs) {
+				max-width: 65px;
+			}
+		}
 	}
 
 	// .menu__list
@@ -65,6 +91,13 @@
 	&__list {
 		margin: 0;
 		padding: 0;
+	
+		@media (max-width: $full) {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			height: 100%;
+		}
 	}
 
 	// .menu__item
@@ -133,7 +166,7 @@
 		position: fixed;
 		top: 40px;
 		right: 35px;
-		z-index: 100;
+		z-index: 3;
 
 		display: none;
 		flex-direction: column;
@@ -145,8 +178,18 @@
 		cursor: pointer;
 		outline: transparent;
 
+		transition: opacity 0.3s;
+
 		@media (max-width: $full) {
 			display: flex;
+		}
+
+		@media (max-width: $md) {
+			width: 31px;
+		}
+
+		&.active {
+			opacity: 0;
 		}
 
 		&:hover {
@@ -162,6 +205,10 @@
 			background-color: $text-color;
 
 			transition: background-color 0.3s;
+
+			@media (max-width: $md) {
+				height: 2px;
+			}
 
 			&:not(:last-child) {
 				margin-bottom: 9px;
@@ -180,5 +227,29 @@
 	&__btn-right {
 		width: 55%;
 		margin-left: auto;
+	}
+
+	&__close {
+		position: absolute;
+		right: 35px;
+		top: 40px;
+
+		display: none;
+		padding: 0;
+
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+		outline: transparent;
+
+		transition: transform 0.3s;
+
+		@media (max-width: $full) {
+			display: inline-block;
+		}
+
+		&:hover {
+			transform: scale(1.1);
+		}
 	}
 }
