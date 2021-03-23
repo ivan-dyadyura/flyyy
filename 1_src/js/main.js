@@ -2,17 +2,18 @@ import accordion from './components/accordion'
 import {
 	Swiper,
 	Navigation,
-	Scrollbar
+	Scrollbar,
+	Pagination
 } from 'swiper'
 import 'simplebar'
 
 accordion('.js-accordion', '.js-accordion__btn', '.js-accordion__content', 'js-accordion__content--active')
 
-Swiper.use([Navigation, Scrollbar])
+Swiper.use([Navigation, Scrollbar, Pagination])
 
 new Swiper('.education-center__slider', {
 	slidesPerView: 'auto',
-	spaceBetween: 32,
+	spaceBetween: 5,
 	navigation: {
 		nextEl: '.education-center__nav--next',
 		prevEl: '.education-center__nav--prev',
@@ -21,7 +22,19 @@ new Swiper('.education-center__slider', {
 		el: '.swiper-scrollbar',
 		draggable: true,
 		dragSize: '120',
-
+	},
+	pagination: {
+		el: '.swiper-pagination',
+		type: 'fraction',
+	},
+	breakpoints: {
+		// when window width is >= 480px
+		768: {
+			spaceBetween: 32
+		},
+		480: {
+			spaceBetween: 16
+		},
 	}
 })
 

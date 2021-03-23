@@ -1,9 +1,17 @@
 .qna {
 	$bg: $second-bg;
 
-	padding: 190px 0px 55px;
+	padding: 190px 0 55px;
 
 	background-color: $bg;
+
+	@media (max-width: $md) {
+		padding: 199px 0 55px;
+	}
+
+	@media (max-width: $sm) {
+		padding: 70px 0 35px;
+	}
 
 	// .qna__inner
 
@@ -11,6 +19,14 @@
 		position: relative;
 
 		padding-left: 345px;
+
+		@media (max-width: $lg) {
+			padding-left: 200px;
+		}
+
+		@media (max-width: $md) {
+			padding-left: 0;
+		}
 
 		&::before {
 			content: "";
@@ -24,6 +40,14 @@
 
 			background-image: url(../img/decor-petals-qna.svg);
 			background-repeat: repeat-y;
+
+			@media (max-width: $lg) {
+				width: 140px;
+			}
+
+			@media (max-width: $md) {
+				display: none;
+			}
 		}
 	}
 
@@ -32,6 +56,14 @@
 	&__title {
 		max-width: 800px;
 		margin-bottom: 100px;
+
+		@media (max-width: $md) {
+			margin-bottom: 60px;
+		}
+		
+		@media (max-width: $xs) {
+			margin-bottom: 30px;
+		}
 	}
 
 	// .qna__list
@@ -63,6 +95,19 @@
 		font-weight: 700;
 		font-size: 30px;
 		line-height: 1.17;
+
+		@media (max-width: $sm) {
+			max-width: 100%;
+			padding-right: 70px;
+
+			font-size: 20px;
+		}
+
+		@media (max-width: $xs) {
+			padding-bottom: 30px;
+			margin-top: 30px;
+			font-size: 14px;
+		}
 	}
 
 	// .qna__btn
@@ -72,12 +117,27 @@
 		right: 0;
 		top: 0;
 
+		@media (max-width: $sm) {
+			width: 20px;
+			height: 20px;
+		}
+
 		&::after {
 			transform: scaleY(1) translateX(-50%);
 			transition: transform 0.3s;
+
+			@media (max-width: $sm) {
+				width: 2px;
+			}
 		}
 
-		// .franchise-start__btn--active
+		&::before {
+			@media (max-width: $sm) {
+				height: 2px;
+			}
+		}
+
+		// .qna__btn.active
 
 		&.active {
 			&::after {
@@ -92,9 +152,24 @@
 		font-size: 17px;
 		line-height: 1.76;
 
+		@media (max-width: $xs) {
+			font-size: 11px;
+			transition: margin 0.3s, max-height 0.9s;
+		}
+
+		&.js-accordion__content--active {
+			@media (max-width: $xs) {
+				margin-top: -10px;
+			}
+		}
+
 		p {
 			margin: 0;
 			padding-bottom: 50px;
+
+			@media (max-width: $xs) {
+				padding-bottom: 30px;
+			}
 		}
 	}
 }
@@ -114,6 +189,7 @@
 		// .js-accordion__content--active
 
 		&--active {
+			
 		}
 	}
 }

@@ -9,6 +9,15 @@
 
 	background-color: #fff;
 
+	@media (max-width: $lg) {
+		padding: 30px 35px;
+	}
+
+
+	@media (max-width: $xs) {
+		padding: 30px 20px;
+	}
+
 	// .form__title
 
 	&__title {
@@ -18,12 +27,24 @@
 		font-weight: 700;
 		font-size: 42px;
 		line-height: 1;
+
+		@media (max-width: $lg) {
+			font-size: 34px;
+		}
+
+		@media (max-width: $xs) {
+			font-size: 20px;
+		}
 	}
 
 	// .form__label
 
 	&__label {
 		margin-bottom: 30px;
+
+		@media (max-width: $xs) {
+			margin-bottom: 20px;
+		}
 	}
 
 	// .form__filed
@@ -40,12 +61,25 @@
 		color: $color;
 		font-size: 15px;
 		line-height: 1.33;
+
+		@media (max-width: $xs) {
+			display: flex;
+			align-items: center;
+			margin-bottom: 30px;
+			
+			font-size: 11px;
+		}
 	}
 
 	// .form__checkbox
 
 	&__checkbox {
 		margin-right: 25px;
+		flex-shrink: 0;
+
+		@media (max-width: $lg) {
+			margin-right: 10px;
+		}
 	}
 
 	// .form__processing-text

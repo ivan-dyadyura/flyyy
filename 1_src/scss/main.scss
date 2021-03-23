@@ -14,6 +14,7 @@
 @import "components/circle.scss";
 @import "components/menu.scss";
 @import "components/logo.scss";
+@import "components/section-modal.scss";
 
 @import "components/js/accordion.scss";
 
@@ -32,11 +33,8 @@
 @import "blocks/footer.scss";
 
 .conditions,
-.team,
-.form-block,
-.qna ,
-.contacts,
-.footer {
+.footer,
+.team {
 	display: none;
 }
 

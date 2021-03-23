@@ -2,11 +2,71 @@
 	$bg: $accent-color;
 	$color: $secondary-text;
 
+	position: relative;
+
 	background-color: $bg;
 
-	background-image: url(../img/form-block-bg-decor.png);
-	background-repeat: no-repeat;
-	background-size: 1920px;
+	@media (max-width: $full) {
+	}
+
+	// .form-block__decor
+
+	&__decor {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		overflow: hidden;
+
+		max-width: 1920px;
+
+		margin: 0 auto;
+
+		@media (max-width: $elg) {
+			width: 100vw;
+		}
+	}
+
+	// .form-block__decor-image
+
+	&__decor-image {
+		position: absolute;
+		left: -15.6%;
+		top: -40%;
+
+		width: 1534px;
+		height: 1534px;
+
+		object-fit: cover;
+		object-position: center;
+
+		@media (max-width: $elg) {
+			left: -30%;
+		}
+
+		@media (max-width: $lg) {
+		}
+
+		@media (max-width: $md) {
+			top: -35%;
+			left: -51%;
+			width: 1400px;
+			height: 1400px;
+			object-position: top;
+			max-width: none;
+		}
+
+		@media (max-width: $sm) {
+			left: -70%;
+		}
+		
+		@media (max-width: $xs) {
+			top: -17%;
+			width: 195vw;
+			height: 195vw;
+		}
+	}
 
 	// .form-block__inner
 
@@ -17,11 +77,28 @@
 		justify-content: space-between;
 		padding: 100px 0 110px;
 
+		@media (max-width: $lg) {
+			align-items: center;
+		}
+
+		@media (max-width: $md) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		@media (max-width: $sm) {
+			padding: 50px 0;
+		}
+
 		&::before {
 			content: url(../img/form-decor-1.png);
 			position: absolute;
 			left: -30px;
 			bottom: -160px;
+
+			@media (max-width: $lg) {
+				display: none;
+			}
 		}
 
 		&::after {
@@ -29,6 +106,10 @@
 			position: absolute;
 			right: -280px;
 			top: -230px;
+
+			@media (max-width: $lg) {
+				display: none;
+			}
 		}
 	}
 
@@ -43,18 +124,43 @@
 		line-height: 1;
 		letter-spacing: -0.06em;
 
+		@media (max-width: $lg) {
+			font-size: 52px;
+		}
+
+		@media (max-width: $md) {
+			margin-bottom: 40px;
+
+			font-size: 40px;
+		}
+
+		@media (max-width: $xs) {
+			font-size: 28px;
+		}
+
 		span {
 			display: block;
 			margin-bottom: 30px;
 			font-size: 40px;
 			line-height: 1;
 			letter-spacing: -0.04em;
+
+			@media (max-width: $lg) {
+				font-size: 30px;
+			}
+
+			@media (max-width: $xs) {
+				margin-bottom: 20px;
+
+				font-size: 14px;
+			}
 		}
 	}
 
 	// .form-block__form
 
-	&__form {}
+	&__form {
+	}
 }
 .container {
 }
@@ -63,8 +169,8 @@
 .tm-checkbox {
 }
 .btn {
-
 	// .btn--transparent
 
-	&--transparent {}
+	&--transparent {
+	}
 }

@@ -310,7 +310,7 @@
 								<span class="team__subtitle">кофеен!</span>
 							</div>
 						</li>
-						<li class="team__item">
+						<li class="team__item js-team-btn" data-modal>
 							<div class="team__image">
 								<img class="team__img" src="img/team/team-member-1.png" alt="Анатолий Анатольев - Какая то должность">
 							</div>
@@ -369,6 +369,29 @@
 							<div class="team__position">Какая то должность</div>
 						</li>
 					</ul>
+				</div>
+			</div>
+
+			<div class="section-modal" data-simplebar>
+				<div class="section-modal__inner">
+					<div class="section-modal__image">
+						<img class="section-modal__img" src="img/franschise/section-modal.jpg" alt="">
+					</div>
+					<div class="section-modal__box">
+						<div class="section-modal__heading">
+							<div class="section-modal__title">
+								Анатолиний Анатольевский
+							</div>
+							<div class="section-modal__subtitle">Какая то должность</div>
+						</div>
+						<div class="section-modal__text" data-simplebar>
+							<p>
+								Открывая кофейню с нуля, вы получаете уникальную возможность прочувствовать все несовершенство бюрократической машины, выслушать мнение гостей о навыках новых подчиненных в литературных (и не очень) оборотах и, конечно же, узнать о партнерах, поставщиках и о себе много нового. Покупая франшизу, вы лишаетесь этой гаммы переживаний и получаете заведомо рабочую бизнес-модель, протестированную точку, полностью интегрированное (под имеющиеся место) рабочее пространство, компетентный персонал и надежное плечо своего франчайзера.
+
+								Открывая кофейню с нуля, вы получаете уникальную возможность прочувствовать все несовершенство бюрократической машины, выслушать мнение гостей о навыках новых подчиненных в литературных (и не очень) оборотах и, конечно же, узнать о партнерах, поставщиках и о себе много нового. Покупая франшизу, вы лишаетесь этой гаммы переживаний и получаете заведомо рабочую бизнес-модель, протестированную точку, полностью интегрированное (под имеющиеся место) рабочее пространство, компетентный персонал и надежное плечо своего франчайзера.
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -437,8 +460,11 @@
 
 					<div class="education-center__row">
 						<!-- If we need navigation buttons -->
-						<button class="education-center__nav education-center__nav--prev">prev</button>
-						<button class="education-center__nav education-center__nav--next">next</button>
+						<div class="education-center__btns">
+							<button class="education-center__nav education-center__nav--prev">prev</button>
+							<div class="education-center__pagination swiper-pagination"></div>
+							<button class="education-center__nav education-center__nav--next">next</button>
+						</div>
 
 						<!-- If we need scrollbar -->
 						<div class="education-center__scrollbar swiper-scrollbar"></div>
@@ -449,11 +475,14 @@
 		</section>
 
 		<section class="form-block">
+			<div class="form-block__decor">
+				<img class="form-block__decor-image" src="img/form-block-bg-decor.png" alt="">
+			</div>
 			<div class="container">
 				<div class="form-block__inner">
 					<h2 class="form-block__title">
 						<span>Даже без опыта <br> ведения бизнеса</span>
-						ВЫ СМОЖЕТЕ ОТКРЫТЬ ПРИБЫЛЬНУЮ КОФЕЙНЮ ПО ФРАНШИЗЕ FlyCoffee
+						ВЫ СМОЖЕТЕ <br> ОТКРЫТЬ <br> ПРИБЫЛЬНУЮ <br> КОФЕЙНЮ ПО <br> ФРАНШИЗЕ <br> FlyCoffee
 					</h2>
 
 					<form action="#" class="form form-block__form">
