@@ -6,6 +6,7 @@ import {
 	Pagination
 } from 'swiper'
 import 'simplebar'
+import teamModal from './components/team-block'
 
 accordion('.js-accordion', '.js-accordion__btn', '.js-accordion__content', 'js-accordion__content--active')
 
@@ -38,7 +39,6 @@ new Swiper('.education-center__slider', {
 	}
 })
 
-
 function menuBurger() {
 	let menu = document.querySelector('.menu__inner')
 	let btn = document.querySelector('.menu__btn')
@@ -56,3 +56,5 @@ function menuBurger() {
 }
 
 menuBurger()
+
+teamModal('.team .js-team-btn', '#team-modal', '.section-modal__close')
