@@ -105,6 +105,14 @@
 				left: -9px;
 				width: 4px;
 			}
+
+			@media (max-width: $sm) {
+				top: 9px;
+			}
+
+			@media (max-width: $xs) {
+				top: 7px;
+			}
 		}
 	}
 

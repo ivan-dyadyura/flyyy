@@ -5,6 +5,10 @@
 
 	background-color: $bg;
 
+	@media (max-width: $xs) {
+		font-size: 11px;
+	}
+
 	// .footer__inner
 
 	&__inner {
@@ -14,12 +18,63 @@
 		padding-top: 70px;
 
 		border-top: 2px solid #fff;
+
+		@media (max-width: $md) {
+			flex-wrap: wrap;
+		}
+
+		@media (max-width: $sm) {
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			margin-bottom: 0;
+			padding-top: 30px;
+
+			text-align: center;
+
+			border-width: 1px;
+		}
 	}
 
 	// .footer__box
 
 	&__box {
+		@media (max-width: $md) {
+			width: 30%;
+			margin-bottom: 30px;
+		}
 
+		@media (max-width: $sm) {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+		}
+
+		&--accordion {
+			@media (max-width: $sm) {
+				margin-top: -10px;
+			}
+
+			@media (max-width: $xs) {
+				margin-right: auto;
+				text-align: left;
+			}
+
+			.footer__list {
+				@media (max-width: $xs) {
+					margin-right: auto;
+				}
+			}
+		}
+
+		&--m-border {
+			@media (max-width: $sm) {
+				padding-bottom: 20px;
+				border-bottom: 1px solid rgba(#fff, 0.2);
+			}
+		}
 	}
 
 	// .footer__logo
@@ -51,11 +106,71 @@
 		font-weight: 700;
 		line-height: 1;
 		text-transform: uppercase;
+
+		transition: margin 0.2s;
+
+		@media (max-width: $xs) {
+			font-size: 14px;
+		}
+
+		&.js-f-accordion__btn {
+			position: relative;
+			width: 100%;
+
+			@media (max-width: $xs) {
+				margin-bottom: 0;
+			}
+
+			&.active {
+				@media (max-width: $sm) {
+					margin-bottom: 15px;
+				}
+
+				&::after {
+					@media (max-width: $sm) {
+						transform: rotateX(180deg);
+					}
+				}
+			}
+
+			&::after {
+				@media (max-width: $sm) {
+					content: "";
+					position: absolute;
+					top: 2px;
+					right: 0;
+
+					width: 20px;
+					height: 12px;
+
+					background-image: url(../img/svg/sprite1.svg#triangle-down);
+					background-size: contain;
+					background-repeat: no-repeat;
+
+					transition: transform 0.5s;
+
+					@media (max-width: $xs) {
+						width: 12px;
+						height: 10px;
+					}
+				}
+			}
+		}
 	}
 
 	// .footer__list
 
 	&__list {
+		&.js-f-accordion__content {
+			max-height: 0;
+			overflow: hidden;
+
+			transition: max-height 0.8s;
+
+			&.active {
+				max-height: 700px;
+			}
+		}
 	}
 
 	// .footer__itema
@@ -63,6 +178,10 @@
 	&__item {
 		&:not(:last-child) {
 			margin-bottom: 11px;
+
+			@media (max-width: $xs) {
+				margin-bottom: 7px;
+			}
 		}
 	}
 
@@ -104,6 +223,21 @@
 
 		border-top: 1px solid rgba(#fff, 0.2);
 
+		@media (max-width: $md) {
+			font-size: 14px;
+		}
+
+		@media (max-width: $sm) {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 30px 0px 25px;
+		}
+
+		@media (max-width: $xs) {
+			font-size: 11px;
+		}
+
 		a {
 			border-bottom: 1px solid #fff;
 
@@ -118,6 +252,17 @@
 
 		p {
 			margin: 0;
+		}
+
+		& > a,
+		& > p {
+			max-width: 30%;
+			text-align: center;
+
+			@media (max-width: $sm) {
+				max-width: 100%;
+				margin-bottom: 15px;
+			}
 		}
 	}
 

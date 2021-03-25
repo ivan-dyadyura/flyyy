@@ -22,6 +22,36 @@
 		mix-blend-mode: normal;
 	}
 
+	&.active {
+		&::before {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	&::before {
+		@media (max-width: $full) {
+			content: "";
+			position: fixed;
+			top: 0;
+			right: 0;
+			left: 0;
+			transform: translateY(-100%);
+			opacity: 0;
+
+			height: 100px;
+
+			background-color: $blue;
+			border-bottom: 1px solid #343779;
+
+			transition: 0.3s opacity;
+		}
+
+		@media (max-width: $xs) {
+			height: 55px;
+		}
+	}
+
 	// .menu__inner
 
 	&__inner {
@@ -30,13 +60,13 @@
 		left: 0;
 		bottom: 0;
 		z-index: 10;
-		
+
 		width: 222px;
 		max-height: 100%;
 		padding: 50px 35px 0 40px;
 		overflow-y: auto;
 		overflow-x: hidden;
-	
+
 		background-color: transparent;
 		// mix-blend-mode: multiply;
 
@@ -53,11 +83,27 @@
 			background-color: #fff;
 		}
 
+		@media (max-width: $sm) {
+			padding: 60px 30px 50px;
+		}
+
+		@media (max-width: $xs) {
+			background-color: $blue;
+			width: 100%;
+		}
+
 		.simplebar-scrollbar {
 			width: 8px;
-	
+
 			&::before {
 				opacity: 0.5;
+			}
+		}
+
+		.simplebar-content {
+			@media (max-width: $sm) {
+				display: flex;
+				justify-content: center;
 			}
 		}
 
@@ -79,6 +125,11 @@
 			left: 35px;
 		}
 
+		@media (max-width: $xs) {
+			top: 20px;
+			left: 20px;
+		}
+
 		img {
 			@media (max-width: $xs) {
 				max-width: 65px;
@@ -91,7 +142,7 @@
 	&__list {
 		margin: 0;
 		padding: 0;
-	
+
 		@media (max-width: $full) {
 			display: flex;
 			justify-content: center;
@@ -188,6 +239,12 @@
 			width: 31px;
 		}
 
+		@media (max-width: $xs) {
+			width: 21px;
+			top: 20px;
+			right: 20px;
+		}
+
 		&.active {
 			opacity: 0;
 		}
@@ -212,6 +269,10 @@
 
 			&:not(:last-child) {
 				margin-bottom: 9px;
+
+				@media (max-width: $xs) {
+					margin-bottom: 6px;
+				}
 			}
 		}
 	}
@@ -228,6 +289,8 @@
 		width: 55%;
 		margin-left: auto;
 	}
+
+	// .menu__close
 
 	&__close {
 		position: absolute;
@@ -246,6 +309,19 @@
 
 		@media (max-width: $full) {
 			display: inline-block;
+		}
+
+		@media (max-width: $xs) {
+			top: 20px;
+			right: 20px;
+
+			width: 15px;
+			height: 15px;
+
+			.s-close-icon {
+				height: 100%;
+				width: 100%;
+			}
 		}
 
 		&:hover {

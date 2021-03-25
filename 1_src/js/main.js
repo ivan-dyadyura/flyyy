@@ -1,60 +1,52 @@
-import accordion from './components/accordion'
-import {
-	Swiper,
-	Navigation,
-	Scrollbar,
-	Pagination
-} from 'swiper'
 import 'simplebar'
-import teamModal from './components/team-block'
 
-accordion('.js-accordion', '.js-accordion__btn', '.js-accordion__content', 'js-accordion__content--active')
+import './functions/menu-burger'
+import './functions/education-slider'
 
-Swiper.use([Navigation, Scrollbar, Pagination])
+import './components/dynamic-adaptive'
 
-new Swiper('.education-center__slider', {
-	slidesPerView: 'auto',
-	spaceBetween: 5,
-	navigation: {
-		nextEl: '.education-center__nav--next',
-		prevEl: '.education-center__nav--prev',
-	},
-	scrollbar: {
-		el: '.swiper-scrollbar',
-		draggable: true,
-		dragSize: '120',
-	},
-	pagination: {
-		el: '.swiper-pagination',
-		type: 'fraction',
-	},
-	breakpoints: {
-		// when window width is >= 480px
-		768: {
-			spaceBetween: 32
+import accordion from './components/accordion'
+import sectionModal from './components/section-modal'
+import mobileSlider from './components/mobile-slider'
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+	accordion('.js-accordion', '.js-accordion__btn', '.js-accordion__content', 'js-accordion__content--active')
+
+	// Team section pupup
+	sectionModal('.team .js-team-btn', '#team-modal', '.section-modal__close')
+
+	// Footer accordion in mobile version
+	accordion('.js-f-accordion', '.js-f-accordion__btn', '.js-f-accordion__content', 'active')
+
+	// Team slider in section team
+	mobileSlider('#team-slider', 1300, {
+		slidesPerView: 2,
+		slidesPerColumn: 2,
+		slidesPerColumnFill: 'row',
+		spaceBetween: 15,
+		navigation: {
+			nextEl: '.team__btn--next',
+			prevEl: '.team__btn--prev',
 		},
-		480: {
-			spaceBetween: 16
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'fraction',
 		},
+	})
+
+	function getBodyScrollTop() {
+		return self.pageYOffset || (document.documentElement && document.documentElement.scrollTop) || (document.body && document.body.scrollTop)
 	}
+	
+	let menu = document.querySelector('.menu')
+
+	document.addEventListener('scroll', () => {
+		if (getBodyScrollTop() > 100) {
+			menu.classList.add('active')
+		} else {
+			menu.classList.remove('active')
+		}
+	})
 })
-
-function menuBurger() {
-	let menu = document.querySelector('.menu__inner')
-	let btn = document.querySelector('.menu__btn')
-	let close = document.querySelector('.menu__close')
-
-	btn.addEventListener('click', () => {
-		menu.classList.add('active')
-		btn.classList.add('active')
-	})
-
-	close.addEventListener('click', () => {
-		menu.classList.remove('active')
-		btn.classList.remove('active')
-	})
-}
-
-menuBurger()
-
-teamModal('.team .js-team-btn', '#team-modal', '.section-modal__close')

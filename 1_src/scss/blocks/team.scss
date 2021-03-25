@@ -8,6 +8,20 @@
 
 	background-color: $bg;
 
+	@media (max-width: $lg) {
+		padding: 100px 0;
+	}
+
+	@media (max-width: $sm) {
+		padding: 50px 0px 100px;
+	}
+
+	.swiper-container {
+		@media (max-width: $sm) {
+			margin: 0 -15px;
+		}
+	}
+
 	&::before {
 		content: "";
 		position: absolute;
@@ -20,6 +34,10 @@
 		background-size: 700px 960px;
 		background-repeat: no-repeat;
 		background-position: 100% -37%;
+
+		@media (max-width: $lg) {
+			display: none;
+		}
 	}
 
 	// .team__inner
@@ -35,6 +53,10 @@
 		max-width: 905px;
 		margin-bottom: 135px;
 		text-transform: uppercase;
+
+		@media (max-width: $lg) {
+			margin-bottom: 60px;
+		}
 	}
 
 	// .team__list
@@ -43,6 +65,7 @@
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
+		padding: 10px 0;
 	}
 
 	// .team__item
@@ -53,8 +76,45 @@
 		flex-direction: column;
 		width: 33%;
 
+		@media (max-width: $lg) {
+			margin: 0;
+			margin-bottom: 50px;
+		}
+
+		@media (max-width: $md) {
+			text-align: center;
+		}
+
+		@media (max-width: $sm) {
+			margin-bottom: 20px;
+		}
+
 		&:not(:nth-last-child(-n + 3)) {
 			margin-bottom: 100px;
+
+			@media (max-width: $lg) {
+				margin-bottom: 50px;
+			}
+
+			@media (max-width: $sm) {
+				margin-bottom: 20px;
+			}
+		}
+
+		&:not(.swiper-slide) {
+			@media (max-width: $lg) {
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+
+			@media (max-width: $sm) {
+				top: 50px;
+			}
+
+			@media (max-width: $xs) {
+				top: 14%;
+			}
 		}
 	}
 
@@ -71,6 +131,23 @@
 
 		border: 3px solid $white;
 		border-radius: 50%;
+
+		@media (max-width: $lg) {
+			transform: rotate(15deg);
+
+			width: 250px;
+			height: 250px;
+		}
+
+		@media (max-width: $sm) {
+			width: 150px;
+			height: 150px;
+		}
+
+		@media (max-width: $xs) {
+			width: 100px;
+			height: 100px;
+		}
 	}
 
 	// .team__suptitle
@@ -81,6 +158,14 @@
 		font-weight: 700;
 		font-size: 20px;
 		line-height: 1;
+
+		@media (max-width: $lg) {
+			font-size: 15px;
+		}
+
+		@media (max-width: $xs) {
+			font-size: 6px;
+		}
 	}
 
 	// .team__value
@@ -89,6 +174,18 @@
 		font-weight: 300;
 		font-size: 105px;
 		line-height: 1;
+
+		@media (max-width: $lg) {
+			font-size: 75px;
+		}
+
+		@media (max-width: $sm) {
+			font-size: 50px;
+		}
+
+		@media (max-width: $xs) {
+			font-size: 30px;
+		}
 	}
 
 	// .team__subtitle
@@ -100,6 +197,18 @@
 		font-size: 38px;
 		line-height: 1;
 		text-transform: uppercase;
+
+		@media (max-width: $lg) {
+			font-size: 28px;
+		}
+
+		@media (max-width: $sm) {
+			font-size: 14px;
+		}
+
+		@media (max-width: $xs) {
+			font-size: 10px;
+		}
 	}
 
 	// .team__image
@@ -110,6 +219,22 @@
 		width: 350px;
 		height: 350px;
 		margin-bottom: 30px;
+
+		@media (max-width: $md) {
+			width: 250px;
+			height: 250px;
+		}
+
+		@media (max-width: $sm) {
+			width: 200px;
+			height: 200px;
+			margin-bottom: 15px;
+		}
+
+		@media (max-width: $xs) {
+			width: 41vw;
+			height: 41vw;
+		}
 
 		&::after {
 			content: "";
@@ -122,6 +247,12 @@
 
 			border: 1px solid $border-color;
 			border-radius: 50%;
+
+			@media (max-width: $md) {
+				left: 5px;
+				top: -5px;
+				border-color: #fff;
+			}
 		}
 	}
 
@@ -141,18 +272,100 @@
 	&__name {
 		font-weight: 500;
 		font-size: 25px;
+
+		@media (max-width: $md) {
+			font-size: 20px;
+		}
+
+		@media (max-width: $sm) {
+			font-size: 16px;
+		}
+
+		@media (max-width: $xs) {
+			font-size: 12px;
+		}
 	}
 
 	// .team__position
 
 	&__position {
 		font-size: 20px;
+
+		@media (max-width: $md) {
+			font-size: 16px;
+		}
+
+		@media (max-width: $sm) {
+			font-size: 14px;
+		}
+
+		@media (max-width: $xs) {
+			font-size: 11px;
+		}
 	}
 
 	// .team__text
 
 	&__text {
 		display: none;
+	}
+
+	// .team__nav
+
+	&__nav {
+		display: none;
+		justify-content: center;
+		align-items: center;
+		margin-right: auto;
+
+		@media (max-width: $lg) {
+			display: flex;
+		}
+
+		@media (max-width: $sm) {
+			font-size: 11px;
+		}
+	}
+
+	// .team__btn
+
+	&__btn {
+		width: 65px;
+		height: 65px;
+		padding: 0;
+
+		font-size: 0;
+
+		background-color: transparent;
+		background-size: contain;
+		background-repeat: no-repeat;
+		border: none;
+		cursor: pointer;
+		outline: transparent;
+
+		@media (max-width: $sm) {
+			width: 31px;
+			height: 31px;
+		}
+
+		// .team__btn--prev
+
+		&--prev {
+			background-image: url(../img/svg/sprite1.svg#arr-left);
+			margin-right: 28px;
+		}
+
+		// .team__btn--next
+
+		&--next {
+			background-image: url(../img/svg/sprite1.svg#arr-right);
+			margin-left: 28px;
+		}
+	}
+
+	// .team__pagination
+
+	&__pagination {
 	}
 }
 .container {

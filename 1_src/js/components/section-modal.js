@@ -1,4 +1,4 @@
-const teamModal = (btn, modalSelector, closeSelector) => {
+const sectionModal = (btn, modalSelector, closeSelector) => {
 	const modal = document.querySelector(modalSelector)
 	const modalPosition = modal.querySelector('[data-m-position]')
 	const modalName = modal.querySelector('[data-m-name]')
@@ -53,4 +53,4 @@ const teamModal = (btn, modalSelector, closeSelector) => {
 	}
 }
 
-export default teamModal
+export default sectionModal

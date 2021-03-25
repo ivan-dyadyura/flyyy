@@ -158,6 +158,8 @@
 			.conditions__heading {
 				@media (max-width: $sm) {
 					font-size: 14px;
+
+					text-transform: capitalize;
 				}
 			}
 		}
@@ -433,6 +435,18 @@
 			@media (max-width: $md) {
 				display: none;
 			}
+		}
+	}
+
+	// .conditions__btn
+
+	&__btn {
+		display: none;
+		margin-top: 50px;
+		width: 100%;
+
+		@media (max-width: $sm) {
+			display: block;
 		}
 	}
 }

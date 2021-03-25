@@ -18,6 +18,14 @@
 
 	transition: transform 0.3s;
 
+	@media (max-width: $lg) {
+		max-width: 80%;
+	}
+
+	@media (max-width: $xs) {
+		max-width: 100%;
+	}
+
 	&.active {
 		transform: scaleX(1);
 	}
@@ -26,7 +34,7 @@
 
 	&__close {
 		position: absolute;
-		top: 100px;
+		top: 50px;
 		right: 40px;
 
 		width: 40px;
@@ -38,6 +46,20 @@
 		outline: transparent;
 		cursor: pointer;
 
+		@media (max-width: $lg) {
+			top: 30px;
+
+			width: 30px;
+			height: 30px;
+		}
+
+		@media (max-width: $sm) {
+			top: 25px;
+			right: 20px;
+			width: 20px;
+			height: 20px;
+		}
+
 		svg {
 			max-width: 100%;
 			max-height: 100%;
@@ -48,6 +70,20 @@
 
 	&__inner {
 		padding: 50px 125px;
+
+		@media (max-width: $lg) {
+			padding: 80px 30px 30px;
+		}
+
+		@media (max-width: $xs) {
+			padding: 60px 20px 20px;
+		}
+	}
+
+	// .section-modal__text-inner
+
+	&__text-inner {
+		margin-bottom: 50px;
 	}
 
 	// .section-modal__image
@@ -56,6 +92,18 @@
 		width: 100%;
 		height: 436px;
 		margin-bottom: 50px;
+
+		@media (max-width: $lg) {
+			height: 300px;
+		}
+
+		@media (max-width: $sm) {
+			height: 250px;
+		}
+
+		@media (max-width: $xs) {
+			height: 50vw;
+		}
 	}
 
 	// .section-modal__img
@@ -72,12 +120,25 @@
 	&__box {
 		display: flex;
 		justify-content: space-between;
+
+		@media (max-width: $md) {
+			flex-direction: column;
+		}
 	}
 
 	// .section-modal__heading
 
 	&__heading {
 		margin-right: 110px;
+
+		@media (max-width: $elg) {
+			margin-right: 55px;
+		}
+
+		@media (max-width: $md) {
+			margin-right: 0;
+			margin-bottom: 15px;
+		}
 	}
 
 	// .section-modal__title
@@ -88,6 +149,16 @@
 		font-weight: 700;
 		font-size: 40px;
 		line-height: 1.12;
+
+		@media (max-width: $elg) {
+			margin-bottom: 25px;
+
+			font-size: 30px;
+		}
+
+		@media (max-width: $md) {
+			margin-bottom: 0px;
+		}
 	}
 
 	// .section-modal__subtitle
@@ -106,6 +177,14 @@
 		overflow: auto;
 
 		font-size: 17px;
+		
+		@media (max-width: $elg) {
+			max-width: 50%;
+		}
+
+		@media (max-width: $md) {
+			max-width: 100%;
+		}
 
 		p {
 			&:not(:last-child) {
@@ -122,7 +201,7 @@
 			left: 0;
 			background: linear-gradient(0deg, #ffffff 0%, rgba(255, 255, 255, 0) 22.22%),
 				linear-gradient(0deg, transparent, transparent);
-			
+
 			pointer-events: none;
 		}
 	}

@@ -2,10 +2,10 @@ const accordion = (container, btnSelector, contentSelector, activeClass, btnActi
 	const containers = document.querySelectorAll(container)
 
 	for (let index = 0; index < containers.length; index++) {
-		const element = containers[index];
+		const element = containers[index]
 		const content = containers[index].querySelectorAll(contentSelector)
 		const tab = containers[index].querySelectorAll(btnSelector)
-
+		
 		function hideTabContent() {
 			content.forEach(item => {
 				item.classList.remove(activeClass)

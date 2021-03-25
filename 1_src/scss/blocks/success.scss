@@ -21,8 +21,13 @@
 
 		text-transform: uppercase;
 
+		@media (max-width: $md) {
+			margin-bottom: 50px;
+		}
+
 		@media (max-width: $xs) {
 			max-width: 255px;
+			margin-bottom: 30px;
 		}
 	}
 
