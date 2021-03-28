@@ -1,0 +1,69 @@
+// Анимация scale
+.tk-a-scale {
+	transform: scale(0);
+
+	transition: transform 0.8s;
+
+	&.tk-anim-active {
+		transform: scale(1);
+	}
+}
+
+.tk-a-rotate {
+	transform: rotateX(90deg);
+	opacity: 0;
+
+	transition: transform 0.8s, opacity 1s;
+
+	&.tk-anim-active {
+		transform: rotateX(0deg);
+		opacity: 1;
+	}
+}
+
+.tk-a-translate-b {
+	transform: translateY(100px);
+	opacity: 0;
+
+	transition: transform 0.8s, opacity 1s;
+
+	&.tk-anim-active {
+		transform: translate(0);
+		opacity: 1;
+	}
+}
+
+.tk-a-translate-l {
+	transform: translateX(-200px);
+	opacity: 0;
+
+	transition: transform 0.8s, opacity 1s;
+
+	&.tk-anim-active {
+		transform: translate(0);
+		opacity: 1;
+	}
+}
+
+.tk-a-translate-r {
+	transform: translateX(200px);
+	opacity: 0;
+
+	transition: transform 0.8s, opacity 1s;
+
+	&.tk-anim-active {
+		transform: translate(0);
+		opacity: 1;
+	}
+}
+
+
+.tk-a-opacity {
+	opacity: 0;
+
+	transition: opacity 0.5s;
+
+	&.tk-anim-active {
+		opacity: 1;
+	}
+}

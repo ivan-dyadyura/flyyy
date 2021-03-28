@@ -24,26 +24,183 @@
 	&--transparent {
 		background-color: transparent;
 		border: 2px solid $secondary-text;
+
+		transition: color 0.3s, background-color 0.3s;
+
+		&:hover {
+			color: #fff;
+			background-color: #343779;
+
+			&::after {
+				background-color: #fff;
+				
+				@media (min-width: $sm) {
+					transform: translateY(-50%) scaleX(1.2)
+				}
+			}
+		}
 	}
 
 	&::after {
 		content: "";
 		position: absolute;
 		top: 50%;
-		right: 30px;
 		transform: translateY(-50%);
+		right: 30px;
+		z-index: 15;
+		transform-origin: left;
 
 		width: 28px;
 		height: 28px;
 
-		background-image: url(../img/svg/sprite1.svg#arrow-right);
+		mask-image: url(../img/svg/sprite1.svg#arrow-right);
+		background-color: #343779;
 		background-size: scale;
 		background-repeat: no-repeat;
+
+		transition: background-color 0.5s, transform 0.3s;
 
 		@media (max-width: $md) {
 			width: 21px;
 			height: 21px;
 			right: 20px;
 		}
+	}
+
+	&:hover {
+		.btn__wave {
+			transform: translate(0, 0);
+
+			&::before,
+			&::after {
+				-webkit-animation-play-state: running !important;
+				animation-play-state: running !important;
+			}
+		}
+
+		.btn__text {
+			animation-name: buttonText;
+		}
+	}
+
+	// .btn__bg
+
+	&__bg {
+		overflow: hidden;
+		z-index: 1;
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		line-height: normal;
+		font-size: 0;
+		pointer-events: none;
+	}
+
+	// .btn__wave
+
+	&__wave {
+		display: block;
+		position: relative;
+		height: 80%;
+		top: 20%;
+		line-height: normal;
+		-webkit-transform: translate(0, 150%);
+		transform: translate(0, 150%);
+		font-size: 0;
+		transition: ease-out 0.3s;
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			line-height: normal;
+			left: 50%;
+			width: 312.5%;
+			padding-top: 312.5%;
+			margin-left: -156%;
+			-webkit-transform-origin: 50% 48%;
+			transform-origin: 50% 48%;
+			border-radius: 43%;
+			z-index: 1;
+			top: 0;
+			-webkit-animation: wave 3s infinite linear;
+			animation: wave 3s infinite linear;
+			-webkit-animation-play-state: paused !important;
+			animation-play-state: paused !important;
+		}
+
+		&::before {
+			animation: wave 4s infinite linear;
+			z-index: 2;
+			background: #FFCB7A;
+			margin-top: 15%;
+		}
+
+		&::after {
+			animation: wave 5s infinite linear;
+			background: #FFC162;
+			margin-top: 13%;
+		}
+
+		&--transparent {
+			&::before {
+				background-color: $blue;
+				opacity: 1;
+			}
+
+			&::after {
+				background-color: $blue;
+				opacity: 0.7;
+			}
+		}
+		
+	}
+
+	// .btn__text
+
+	&__text {
+		display: inline-block;
+		line-height: normal;
+		z-index: 15;
+		position: relative;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		animation-duration: 1s;
+	}
+}
+
+@keyframes wave {
+	from {
+		-webkit-transform: rotate(0) translateZ(-1px);
+		transform: rotate(0) translateZ(-1px);
+	}
+	to {
+		-webkit-transform: rotate(360deg) translateZ(-1px);
+		transform: rotate(360deg) translateZ(-1px);
+	}
+}
+
+@keyframes buttonText {
+	from {
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0);
+	}
+	25% {
+		-webkit-transform: translate(0, -5%);
+		transform: translate(0, -5%);
+	}
+	50% {
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0);
+	}
+	75% {
+		-webkit-transform: translate(0, 5%);
+		transform: translate(0, 5%);
+	}
+	to {
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0);
 	}
 }

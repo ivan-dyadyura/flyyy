@@ -16,3 +16,17 @@ function menuBurger() {
 }
 
 menuBurger()
+
+function getBodyScrollTop() {
+	return self.pageYOffset || (document.documentElement && document.documentElement.scrollTop) || (document.body && document.body.scrollTop)
+}
+
+let menu = document.querySelector('.menu')
+
+document.addEventListener('scroll', () => {
+	if (getBodyScrollTop() > 50) {
+		menu.classList.add('active')
+	} else {
+		menu.classList.remove('active')
+	}
+})

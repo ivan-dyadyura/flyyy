@@ -162,13 +162,17 @@
 
 	&__list {
 		&.js-f-accordion__content {
-			max-height: 0;
-			overflow: hidden;
+			@media (max-width: $sm) {
+				max-height: 0;
+				overflow: hidden;
 
-			transition: max-height 0.8s;
+				transition: max-height 0.8s;
+			}
 
 			&.active {
-				max-height: 700px;
+				@media (max-width: $sm) {
+					max-height: 700px;
+				}
 			}
 		}
 	}
@@ -188,6 +192,13 @@
 	// .footer__link
 
 	&__link {
+		border-bottom: 1px solid transparent;
+
+		transition: border-color 0.3s;
+
+		&:hover {
+			border-color: #fff;
+		}
 	}
 
 	// .footer__social-list
@@ -207,10 +218,7 @@
 	// .footer__svg
 
 	&__svg {
-		.tm-i-intagram {
-			// fill: #fff;
-			stroke: #fff;
-		}
+	
 	}
 
 	// .footer__bottom

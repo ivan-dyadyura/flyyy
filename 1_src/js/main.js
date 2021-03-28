@@ -1,9 +1,10 @@
 import 'simplebar'
 
-import './functions/menu-burger'
+import './functions/menu'
 import './functions/education-slider'
 
 import './components/dynamic-adaptive'
+import './components/anim'
 
 import accordion from './components/accordion'
 import sectionModal from './components/section-modal'
@@ -34,19 +35,5 @@ document.addEventListener('DOMContentLoaded', () => {
 			el: '.swiper-pagination',
 			type: 'fraction',
 		},
-	})
-
-	function getBodyScrollTop() {
-		return self.pageYOffset || (document.documentElement && document.documentElement.scrollTop) || (document.body && document.body.scrollTop)
-	}
-	
-	let menu = document.querySelector('.menu')
-
-	document.addEventListener('scroll', () => {
-		if (getBodyScrollTop() > 100) {
-			menu.classList.add('active')
-		} else {
-			menu.classList.remove('active')
-		}
 	})
 })

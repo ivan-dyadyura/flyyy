@@ -1,7 +1,45 @@
-$color: $secondary-text;
-$stroke: $secondary-text;
+.tm-i-instagram,
+.tm-i-vk {
+	&:hover {
+		circle {
+			fill: #343779;
+		}
 
-.tm-i-intagram {
-	fill: $color;
-	stroke: $stroke;
+		path {
+			fill: #fff;
+		}
+	}
+
+	circle {
+		stroke: rgba(#343779, 0.12);
+		fill: transparent;
+		transition: fill 0.3s;
+	}
+
+	path {
+		fill: #343779;
+
+		transition: all 0.3s;
+	}
+
+	&--white {
+		circle {
+			stroke: rgba(#fff, 0.12);
+			fill: transparent;
+		}
+
+		path {
+			fill: #fff;
+		}
+
+		&:hover {
+			circle {
+				fill: #fff;
+			}
+
+			path {
+				fill: #343779;
+			}
+		}
+	}
 }

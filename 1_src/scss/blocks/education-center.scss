@@ -124,10 +124,10 @@
 			text-shadow: 2px 2px 2px $color, -1px -1px 2px $color, 1px -1px 2px $color, -1px 1px 2px $color,
 				1px 1px 2px $color;
 
-				@media (max-width: $sm) {
-					left: -5px;
-					bottom: -3px;
-				}
+			@media (max-width: $sm) {
+				left: -5px;
+				bottom: -3px;
+			}
 		}
 	}
 
@@ -159,7 +159,7 @@
 			position: absolute;
 			top: 37px;
 			right: 43px;
-			
+
 			font-size: 20px;
 		}
 
@@ -185,10 +185,10 @@
 			text-shadow: 2px 2px 2px $color, -1px -1px 2px $color, 1px -1px 2px $color, -1px 1px 2px $color,
 				1px 1px 2px $color;
 
-				@media (max-width: $sm) {
-					left: -2px;
-					bottom: -1px;
-				}
+			@media (max-width: $sm) {
+				left: -2px;
+				bottom: -1px;
+			}
 		}
 	}
 
@@ -330,7 +330,6 @@
 		}
 	}
 
-
 	// .education-center__slide
 
 	&__slide {
@@ -377,7 +376,7 @@
 		justify-content: space-between;
 		align-items: center;
 		max-width: 1360px;
-		
+
 		@media (max-width: $elg) {
 			max-width: calc(100vw - 40px);
 		}
@@ -393,10 +392,12 @@
 		display: flex;
 		align-items: center;
 		margin-right: auto;
+		margin-left: 15px;
 
 		@media (max-width: $sm) {
 			margin-right: 0;
 			margin-bottom: 35px;
+			margin-left: 0;
 			font-size: 11px;
 		}
 	}
@@ -417,6 +418,8 @@
 		cursor: pointer;
 		outline: transparent;
 
+		transition: transform 0.3s;
+
 		@media (max-width: $sm) {
 			width: 31px;
 			height: 31px;
@@ -427,6 +430,11 @@
 		&--prev {
 			background-image: url(../img/svg/sprite1.svg#arr-left);
 			margin-right: 28px;
+			transform-origin: right;
+
+			&:hover {
+				transform: scaleX(1.2);
+			}
 		}
 
 		// .education-center__nav--next
@@ -434,6 +442,11 @@
 		&--next {
 			background-image: url(../img/svg/sprite1.svg#arr-right);
 			margin-left: 28px;
+			transform-origin: left;
+
+			&:hover {
+				transform: scaleX(1.2);
+			}
 		}
 	}
 

@@ -193,6 +193,13 @@
 	&__link {
 		color: $text-color;
 		font-weight: 400;
+
+		border-bottom: 1px solid transparent;
+		transition: border-color 0.3s;
+
+		&:hover {
+			border-color: #343779;
+		}
 	}
 
 	// .menu__social

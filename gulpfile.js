@@ -183,7 +183,7 @@ const htmlMinify = () => {
 const tinypng = () => {
 	return src(`${srcFolder}/img/**/*.{png,jpg,jpeg}`)
 		.pipe(tiny({
-			key: 'yyxp7wnJ1KBvXH895RH01TT4VqdQkwyL',
+			key: '',
 			log: true,
 			parallel: true,
 			parallelMax: 50,
@@ -240,9 +240,9 @@ exports.build = series(clean, parallel(htmlInclude, scriptsBuild, fonts, resourc
 
 const deploy = () => {
 	let conn = ftp.create({
-		host: '148.251.7.151',
-		user: 'lvan2125_admin',
-		password: 'H4y7Y5p9',
+		host: '',
+		user: '',
+		password: '',
 		parallel: 10,
 		log: gutil.log
 	});
