@@ -3,7 +3,7 @@ const animItems = document.querySelectorAll('.tk-anim');
 
 if (animItems.length > 0) {
 	window.addEventListener('scroll', () => {
-		console.log('scroll');
+		// console.log('scroll');
 		animOnScroll()
 	});
 	function animOnScroll() {

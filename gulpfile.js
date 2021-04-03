@@ -240,9 +240,9 @@ exports.build = series(clean, parallel(htmlInclude, scriptsBuild, fonts, resourc
 
 const deploy = () => {
 	let conn = ftp.create({
-		host: '',
-		user: '',
-		password: '',
+		host: '148.251.7.151',
+		user: 'lvan2125_admin',
+		password: 'X9v8D3w2',
 		parallel: 10,
 		log: gutil.log
 	});

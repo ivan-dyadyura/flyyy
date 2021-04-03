@@ -3,6 +3,8 @@
 	$border-color: $secondary-text;
 	$color: $secondary-text;
 
+	position: relative;
+
 	display: block;
 
 	// .tm-field__input
@@ -35,6 +37,5 @@
 			font-weight: 400;
 			color: $color;
 		}
-
 	}
 }

@@ -45,12 +45,41 @@
 		@media (max-width: $xs) {
 			margin-bottom: 20px;
 		}
+
+		&._error {
+			&::after {
+				transform: scale(1);
+			}
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			right: 0;
+			top: 20px;
+			z-index: 10;
+			transform: scale(0);
+
+			display: inline-block;
+			width: 21px;
+			height: 21px;
+
+			background-image: url(../img/svg/sprite1.svg#form-req);
+			background-repeat: no-repeat;
+			background-size: contain;
+
+			transition: transform 0.3s;
+		}
 	}
 
 	// .form__filed
 
-	&__filed {
-		
+	&__field {
+		padding-right: 30px;
+
+		&._error {
+			border-color: #FF6767;
+		}
 	}
 
 	// .form__processing

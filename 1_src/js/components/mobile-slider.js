@@ -38,7 +38,7 @@ const mobileSlider = (sliderSelector, windoWidth, sliderConfig) => {
 	window.addEventListener('resize', () => {
 		clearTimeout(the_timer)
 		the_timer = setTimeout(function () {
-			console.log('resize')
+			// console.log('resize')
 			resizeHandlerSlider()
 		}, 75);
 	})

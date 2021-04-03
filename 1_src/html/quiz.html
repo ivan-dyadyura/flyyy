@@ -1,0 +1,132 @@
+<div class="quiz" data-simplebar>
+	<form class="quiz__inner js-send-form" method="POST" action="resources/mailer.php">
+		<button class="quiz__close">
+			<svg width="40" height="40" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M42.4268 14.1406L14.1425 42.4249" stroke="#343779" stroke-width="5" />
+				<path d="M14.1416 14.1406L42.4259 42.4249" stroke="#343779" stroke-width="5" />
+			</svg>
+		</button>
+		<div class="quiz__image-slider swiper-container">
+			<div class="swiper-wrapper">
+				<div class="quiz__image swiper-slide">
+					<img class="quiz__img" src="img/quiz/1.png" alt="">
+				</div>
+				<div class="quiz__image swiper-slide">
+					<img class="quiz__img" src="img/quiz/2.png" alt="">
+				</div>
+				<div class="quiz__image swiper-slide">
+					<img class="quiz__img" src="img/quiz/3.png" alt="">
+				</div>
+			</div>
+
+		</div>
+
+		<div class="quiz__content swiper-container">
+			<div class="quiz__progress">
+				<span class="quiz__current">1</span>
+				/
+				<span class="quiz__count">15</span>
+			</div>
+			<div class="quiz__slider swiper-wrapper">
+				<div class="quiz__item swiper-slide">
+					<div class="quiz__title">
+						Приходилось ли Вам ранее заниматься предпринимательской деятельностью?
+					</div>
+					<div class="quiz__box">
+						<label class="quiz__label tm-radio">
+							<input type="radio" class="quiz__radio tm-radio__input" name="Приходилось ли Вам ранее заниматься предпринимательской деятельностью?" checked value="Да. Я предприниматель со стажем, есть опыт в HoReCa.">
+							<span class="tm-radio__box"></span>
+							<span class="tm-radio__text quiz__text">Да. Я предприниматель со стажем, есть опыт в HoReCa.</span>
+						</label>
+						<label class="quiz__label tm-radio">
+							<input type="radio" class="quiz__radio tm-radio__input" name="Приходилось ли Вам ранее заниматься предпринимательской деятельностью?" value="Да. Но деятельность никак не связана с HoReCa.">
+							<span class="tm-radio__box"></span>
+							<span class="tm-radio__text quiz__text">Да. Но деятельность никак не связана с HoReCa.</span>
+						</label>
+						<label class="quiz__label tm-radio">
+							<input type="radio" class="quiz__radio tm-radio__input" name="Приходилось ли Вам ранее заниматься предпринимательской деятельностью?" value="Нет..">
+							<span class="tm-radio__box"></span>
+							<span class="tm-radio__text quiz__text">Нет..</span>
+						</label>
+					</div>
+				</div>
+
+				<div class="quiz__item swiper-slide">
+					<div class="quiz__title">
+						Что по вашему мнению в большей степени влияет на успех кофейни?
+					</div>
+					<div class="quiz__box">
+						<label class="quiz__label tm-radio">
+							<input type="radio" class="quiz__radio tm-radio__input" name="Что по вашему мнению в большей степени влияет на успех кофейни?" checked value="Доступная локация">
+							<span class="tm-radio__box"></span>
+							<span class="tm-radio__text quiz__text">Доступная локация</span>
+						</label>
+						<label class="quiz__label tm-radio">
+							<input type="radio" class="quiz__radio tm-radio__input" name="Что по вашему мнению в большей степени влияет на успех кофейни?" value="Узнаваемость бренда">
+							<span class="tm-radio__box"></span>
+							<span class="tm-radio__text quiz__text">Узнаваемость бренда</span>
+						</label>
+						<label class="quiz__label tm-radio">
+							<input type="radio" class="quiz__radio tm-radio__input" name="Что по вашему мнению в большей степени влияет на успех кофейни?" value="Лояльные цены">
+							<span class="tm-radio__box"></span>
+							<span class="tm-radio__text quiz__text">Лояльные цены</span>
+						</label>
+					</div>
+				</div>
+
+				<div class="quiz__item swiper-slide">
+					<div class="quiz__title">
+						Есть ли у Вас опыт подбора помещений?
+					</div>
+					<div class="quiz__box">
+						<label class="quiz__label tm-radio">
+							<input type="radio" class="quiz__radio tm-radio__input" name="Есть ли у Вас опыт подбора помещений?" checked value="Да. Занимался подбором помещения.">
+							<span class="tm-radio__box"></span>
+							<span class="tm-radio__text quiz__text">Да. Занимался подбором помещения.</span>
+						</label>
+						<label class="quiz__label tm-radio">
+							<input type="radio" class="quiz__radio tm-radio__input" name="Есть ли у Вас опыт подбора помещений?" value="Приходилось сталкиваться. Доверил подбор специалисту.">
+							<span class="tm-radio__box"></span>
+							<span class="tm-radio__text quiz__text">Приходилось сталкиваться. Доверил подбор специалисту.</span>
+						</label>
+						<label class="quiz__label tm-radio">
+							<input type="radio" class="quiz__radio tm-radio__input" name="Есть ли у Вас опыт подбора помещений?" value="Нет, не приходилось заниматься этим.">
+							<span class="tm-radio__box"></span>
+							<span class="tm-radio__text quiz__text">Нет, не приходилось заниматься этим.</span>
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="quiz__nav">
+				<button class="btn btn--transparent quiz__btn quiz__btn--prev" disabled>Назад</button>
+				<button class="btn btn--transparent quiz__btn quiz__btn--next">Далее</button>
+			</div>
+		</div>
+
+		<div class="quiz__form form">
+			<div class="quiz__form-title">Заполните форму для получения результатов теста</div>
+			<label class="tm-field form__label">
+				<input type="text" class="tm-field__input form__field v-req" placeholder="Имя" required>
+			</label>
+			<label class="tm-field form__label">
+				<input type="email" class="tm-field__input form__field v-req _email" placeholder="Kfgjiu@kjh.mail.ru" required>
+			</label>
+			<label class="tm-field tm-phone form__label">
+				<span class="tm-phone__left">Телефон</span>
+				<input type="tel" class="tm-field__input tm-phone__input form__field js-phone-mask v-req" placeholder="958 225-48-15" required>
+			</label>
+			<label class="tm-field form__label">
+				<input type="text" class="tm-field__input form__field v-req" placeholder="Введите незвание города" required>
+			</label>
+			<button class="btn btn--transparent" type="submit">Получить результаты</button>
+
+			<label class="tm-checkbox-2 form__processing quiz__form-processing">
+				<input class="tm-checkbox-2__input" type="checkbox" required>
+				<span class="tm-checkbox-2__box"></span>
+				<span class="form__processing-text"><a href="#">С политикой конфиженциальности</a> ознакомлен(а)</span>
+			</label>
+		</div>
+	</form>
+</div>
+<div class="overlay"></div>

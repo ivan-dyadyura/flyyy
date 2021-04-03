@@ -2,13 +2,17 @@ import 'simplebar'
 
 import './functions/menu'
 import './functions/education-slider'
+import './functions/quiz-send'
 
 import './components/dynamic-adaptive'
 import './components/anim'
+import './components/phone'
+import modals from './components/modal'
 
 import accordion from './components/accordion'
 import sectionModal from './components/section-modal'
 import mobileSlider from './components/mobile-slider'
+import quiz from './components/quiz'
 
 
 
@@ -36,4 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			type: 'fraction',
 		},
 	})
+
+	modals()
+
+	quiz()
 })
