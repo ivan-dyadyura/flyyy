@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "inputmask": "^5.0.5",
+    "intl-tel-input": "^17.0.12",
     "normalize.css": "^8.0.1",
     "simplebar": "^5.3.0",
     "swiper": "^6.5.0"

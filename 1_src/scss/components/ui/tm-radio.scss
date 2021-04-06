@@ -55,6 +55,7 @@
 		justify-content: center;
 		align-items: center;
 		vertical-align: middle;
+		flex-shrink: 0;
 
 		width: 20px;
 		height: 20px;
@@ -69,6 +70,7 @@
 		transition-duration: 0.3s;
 
 		@media (max-width: $xs) {
+			margin-right: 10px;
 			// width: 19px;
 			// height: 19px;
 		}

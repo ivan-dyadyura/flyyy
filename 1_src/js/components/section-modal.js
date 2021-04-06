@@ -3,6 +3,7 @@ const sectionModal = (btn, modalSelector, closeSelector) => {
 	const modalPosition = modal.querySelector('[data-m-position]')
 	const modalName = modal.querySelector('[data-m-name]')
 	const modalText = modal.querySelector('[data-m-text]')
+	const modalImg = modal.querySelector('[data-m-image]')
 	const buttons = document.querySelectorAll(btn)
 	const close = document.querySelector(closeSelector)
 	const html = document.querySelector('html')
@@ -14,6 +15,7 @@ const sectionModal = (btn, modalSelector, closeSelector) => {
 			const name = item.querySelector('.js-name')
 			const position = item.querySelector('.js-position')
 			const text = item.querySelector('.js-text')
+			const image = item.querySelector('.js-image')
 
 			modal.classList.add('active')
 			html.style.overflow = 'hidden'
@@ -27,6 +29,10 @@ const sectionModal = (btn, modalSelector, closeSelector) => {
 			}
 			if (text) {
 				modalText.innerHTML = text.textContent || text.innerText
+			}
+			if (image) {
+				const imageSrc = image.getAttribute('data-m-src')
+				modalImg.setAttribute('src', imageSrc)
 			}
 		})
 	})

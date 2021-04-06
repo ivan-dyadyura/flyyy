@@ -183,7 +183,7 @@ const htmlMinify = () => {
 const tinypng = () => {
 	return src(`${srcFolder}/img/**/*.{png,jpg,jpeg}`)
 		.pipe(tiny({
-			key: '',
+			key: 'yyxp7wnJ1KBvXH895RH01TT4VqdQkwyL',
 			log: true,
 			parallel: true,
 			parallelMax: 50,

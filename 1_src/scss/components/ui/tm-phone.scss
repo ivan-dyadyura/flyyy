@@ -17,6 +17,10 @@
 		font-weight: 500;
 
 		border-right: 1px solid rgba(#343779, 0.15);
+
+		@media (max-width: $xs) {
+			font-size: 11px;
+		}
 	}
 
 	// .tm-phone__input

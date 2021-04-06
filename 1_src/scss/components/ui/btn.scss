@@ -41,6 +41,17 @@
 		}
 	}
 
+	&:disabled {
+		background-color: grey;
+		color: #fff;
+		cursor: auto;
+		pointer-events: none;
+		
+		&::after {
+			background-color: #fff;
+		}
+	}
+
 	&::after {
 		content: "";
 		position: absolute;

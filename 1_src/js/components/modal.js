@@ -1,11 +1,13 @@
 const modals = () => {
 	function bindModal(triggerSelector, modalSelector, closeSelector, closeClickOverlay = true) {
 		const trigger = document.querySelectorAll(triggerSelector),
-			modal = document.querySelector(modalSelector),
+			modal = trigger.getAttribute('modal-target'),
 			close = document.querySelector(closeSelector),
 			windows = document.querySelectorAll('[data-modal]'),
 			scroll = calcScroll(),
 			overlay = document.querySelector('.overlay')
+
+
 
 		const html = document.querySelector('html')
 
@@ -75,7 +77,9 @@ const modals = () => {
 	}
 
 	bindModal('.js-quiz-btn', '.quiz', '.quiz__close')
-	// showModalByTime('.popup', 60000)
+
+	bindModal('.js-pupup-btn', '.modal-form', '.modal-form__close')
+		// showModalByTime('.popup', 60000)
 }
 
 export default modals

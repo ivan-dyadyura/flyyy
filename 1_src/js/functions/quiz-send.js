@@ -1,5 +1,3 @@
-import quiz from "../components/quiz"
-
 const form = () => {
 	let form = document.querySelector('.js-send-form')
 	let button = form.querySelector('button[type=submit]')
@@ -43,14 +41,16 @@ const form = () => {
 		request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
 
 		let data = new FormData(form)
-		let dataPost
+		let dataPost = null
 
 		// Формируем массив данных для отправки 
 		data.forEach(function (value, key) {
 			dataPost += '&' + key + '=' + value
 		})
 
-		request.send(dataPost)
+		if (dataPost) {
+			request.send(dataPost)
+		}
 	})
 
 	function validate(form) {

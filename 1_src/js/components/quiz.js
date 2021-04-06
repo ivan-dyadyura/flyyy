@@ -24,6 +24,7 @@ function quiz() {
 
 	const slider = new Swiper(quiz, {
 		allowTouchMove: false,
+		autoHeight: true,
 	})
 
 	countSlides.innerHTML = slider.slides.length
@@ -54,7 +55,7 @@ function quiz() {
 				e.preventDefault()
 				setTimeout(() => {
 					quizWrapper.classList.add('quiz--ended')
-				}, 250)
+				}, 400)
 			})
 		}
 	}

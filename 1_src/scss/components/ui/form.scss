@@ -69,6 +69,12 @@
 			background-size: contain;
 
 			transition: transform 0.3s;
+
+			@media (max-width: $xs) {
+				top: 4px;
+				width: 17px;
+				height: 17px;
+			}
 		}
 	}
 

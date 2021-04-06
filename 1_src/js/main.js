@@ -7,14 +7,14 @@ import './functions/quiz-send'
 import './components/dynamic-adaptive'
 import './components/anim'
 import './components/phone'
-import modals from './components/modal'
+import './components/form-send'
+
+import modals from './components/modal2'
 
 import accordion from './components/accordion'
 import sectionModal from './components/section-modal'
 import mobileSlider from './components/mobile-slider'
 import quiz from './components/quiz'
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
 	accordion('.js-accordion', '.js-accordion__btn', '.js-accordion__content', 'js-accordion__content--active')
@@ -40,8 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			type: 'fraction',
 		},
 	})
-
 	modals()
-
 	quiz()
 })
