@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flyyy</title>
+
+
+	<link rel="stylesheet" href="css/simplebar.min.css">
+	<link rel="stylesheet" href="css/landlord.min.css">
+
+	<noscript>
+		<style>
+			.simplebar-content-wrapper {
+				overflow: auto;
+			}
+		</style>
+	</noscript>
+</head>
+<body class="franchise">
+
+	@include('html/menu.html')
+
+	<main class="main">
+
+		<div class="page-heading">
+			<div class="container">
+				<div class="page-heading__inner">
+					<ul class="breadcrumbs page-heading__breadcrumbs">
+						<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+						<li class="breadcrumbs__item"><span class="breadcrumbs__link">Арендодателям</span></li>
+					</ul>
+					<h1 class="title page-heading__title">Арендодателям</h1>
+					<div class="page-heading__text">
+						<p>
+							Предложить помещение для сети кофеен FlyCoffee. <br>
+							У нас пеостоянно запускаются кофейни и мы оцениваем <br>
+							ежедневно от 2 до 5 локаций для франчайзи.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="page-offer">
+			<div class="container">
+				<h2 class="title-3 page-offer__title">
+					Рассмотрим ваше <br>
+					предложение если:
+				</h2>
+
+				<div class="page-offer__inner">
+					<div class="page-offer__item">
+						<div class="page-offer__name page-offer__name--small">высокий <br> трафик</div>
+						<p class="page-offer__text">У вас помещения только с высоким трафиком</p>
+					</div>
+					<div class="page-offer__item">
+						<div class="page-offer__name">4-50<sup>м2</sup></div>
+						<p class="page-offer__text">Площадь помещения</p>
+					</div>
+					<div class="page-offer__item">
+						<div class="page-offer__name">7<sup>Квт</sup></div>
+						<p class="page-offer__text">Электричество. Нам необходимо не менее 7 кВт</p>
+					</div>
+				</div>
+				<button class="btn btn--transparent btn--white js-pupup-btn" data-modal-target="#modal1">предложить помещение</button>
+			</div>
+		</div>
+
+	</main>
+
+	@include('html/footer.html')
+
+	@include('html/modal-form.html')
+
+	<div class="overlay"></div>
+
+	<script src="js/global.js"></script>
+
+</body>
+</html>

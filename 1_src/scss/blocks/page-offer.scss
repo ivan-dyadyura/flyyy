@@ -1,0 +1,149 @@
+.page-offer {
+	$bg: $second-bg;
+
+	background-color: $bg;
+
+	padding: 80px 0px 140px;
+
+	@media (max-width: $md) {
+		padding-top: 50px;
+		padding-bottom: 90px;
+	}
+
+	@media (max-width: $xs) {
+		padding-bottom: 50px;
+		padding-top: 30px;
+	}
+
+	// .page-offer__title
+
+	&__title {
+		max-width: 750px;
+		margin-bottom: 25px;
+
+		@media (max-width: $md) {
+			margin-bottom: 20px;
+			font-size: 30px;
+		}
+
+		@media (max-width: $xs) {
+			margin-bottom: 10px;
+			font-size: 20px;
+		}
+	}
+
+	// .page-offer__inner
+
+	&__inner {
+		margin-bottom: 70px;
+
+		@media (max-width: $md) {
+			margin-bottom: 50px;
+		}
+		
+		@media (max-width: $xs) {
+			margin-bottom: 40px;
+		}
+	}
+
+	// .page-offer__item
+
+	&__item {
+		display: flex;
+		align-items: center;
+		padding: 49px 0;
+
+		border-bottom: 2px solid rgba(#fff, 0.3);
+
+		@media (max-width: $md) {
+			padding: 40px 0;
+		}
+		
+		@media (max-width: $xs) {
+			flex-direction: column;
+			padding: 30px 0 ;
+		}
+	}
+
+	// .page-offer__name
+
+	&__name {
+		width: 47.5%;
+		margin-right: 30px;
+
+		font-weight: 700;
+		font-size: 128px;
+		line-height: 1;
+		text-transform: uppercase;
+
+		@media (max-width: $md) {
+			font-size: 60px;
+		}
+
+		@media (max-width: $xs) {
+			font-size: 30px;
+			margin: 0 0 20px 0;
+		}
+
+		// .page-offer__name--small
+
+		&--small {
+			font-size: 60px;
+
+			@media (max-width: $md) {
+				font-size: 40px;
+			}
+
+			@media (max-width: $xs) {
+				font-size: 30px;
+			}
+		}
+
+		sup {
+			top: -2em;
+
+			display: inline-block;
+			padding-left: 5px;
+
+			font-size: 40px;
+
+			@media (max-width: $md) {
+				font-size: 20px;
+			}
+
+			@media (max-width: $xs) {
+				font-size: 12px;
+			}
+		}
+	}
+
+	// .page-offer__text
+
+	&__text {
+		max-width: 280px;
+		margin: 0;
+
+		font-weight: 500;
+		font-size: 25px;
+		line-height: 1.2;
+
+		@media (max-width: $md) {
+			font-size: 20px;
+		}
+
+		@media (max-width: $xs) {
+			font-size: 14px;
+			line-height: 15px;
+		}
+	}
+
+	// .page-offer__btn
+
+	&__btn {
+		@media (max-width: $xs) {
+			width: 100%;
+		}
+	}
+}
+.container {
+}

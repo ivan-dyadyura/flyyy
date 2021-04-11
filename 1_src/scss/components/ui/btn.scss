@@ -33,9 +33,9 @@
 
 			&::after {
 				background-color: #fff;
-				
+
 				@media (min-width: $sm) {
-					transform: translateY(-50%) scaleX(1.2)
+					transform: translateY(-50%) scaleX(1.2);
 				}
 			}
 		}
@@ -46,7 +46,7 @@
 		color: #fff;
 		cursor: auto;
 		pointer-events: none;
-		
+
 		&::after {
 			background-color: #fff;
 		}
@@ -91,6 +91,24 @@
 
 		.btn__text {
 			animation-name: buttonText;
+		}
+	}
+
+	&--white {
+		border-color: #fff;
+		color: #fff;
+
+		&:hover {
+			background-color: #fff;
+			color: $secondary-text;
+
+			&::after {
+				background-color: $second-bg;
+			}
+		}
+
+		&::after {
+			background-color: #fff;
 		}
 	}
 
@@ -145,13 +163,13 @@
 		&::before {
 			animation: wave 4s infinite linear;
 			z-index: 2;
-			background: #FFCB7A;
+			background: #ffcb7a;
 			margin-top: 15%;
 		}
 
 		&::after {
 			animation: wave 5s infinite linear;
-			background: #FFC162;
+			background: #ffc162;
 			margin-top: 13%;
 		}
 
@@ -166,7 +184,6 @@
 				opacity: 0.7;
 			}
 		}
-		
 	}
 
 	// .btn__text

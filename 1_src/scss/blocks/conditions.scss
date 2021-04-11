@@ -33,7 +33,7 @@
 			margin-right: 75px;
 
 			@media (max-width: $md) {
-				margin: 0;
+				margin: 0 auto;
 			}
 		}
 
@@ -200,6 +200,7 @@
 		font-weight: 700;
 		line-height: 1;
 		letter-spacing: -0.02em;
+		white-space: nowrap;
 
 		@media (max-width: $md) {
 			max-width: max-content;

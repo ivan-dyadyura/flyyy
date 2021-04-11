@@ -28,6 +28,9 @@ const tiny = require('gulp-tinypng-compress')
 const gutil = require('gulp-util')
 const ftp = require('vinyl-ftp')
 const htmlmin = require('gulp-htmlmin')
+const babel = require('gulp-babel')
+const nunjucksRender = require('gulp-nunjucks-render');
+
 
 let mode = 'development'
 
@@ -87,10 +90,9 @@ const styles = () => {
 }
 
 const htmlInclude = () => {
-	return src([`${srcFolder}/index.html`])
-		.pipe(fileInclude({
-			prefix: '@',
-			basepath: '@file'
+	return src([`${srcFolder}/njk/*.njk`])
+		.pipe(nunjucksRender({
+			path: '1_src/njk/'
 		}))
 		.pipe(dest('./app'))
 		.pipe(browserSync.stream())
@@ -111,35 +113,21 @@ const clean = () => {
 }
 
 const scripts = () => {
-	return src(`${srcFolder}/js/main.js`)
-		.pipe(webpackStream({
-			output: {
-				filename: 'main.js'
-			},
-			mode: mode,
-			module: {
-				rules: [{
-					test: /\.m?js$/,
-					exclude: /node_modules/,
-					use: {
-						loader: 'babel-loader',
-						options: {
-							presets: [
-								['@babel/preset-env', {
-									targets: "defaults"
-								}]
-							]
-						}
-					}
-				}]
-			}
+	return src(`${srcFolder}/js/*.js`)
+		.pipe(fileInclude({
+			prefix: '@',
+			basepath: '@file'
 		}))
-		.on('error', function (err) {
-			console.error('WEBPACK ERROR', err)
-			this.emit('end') // Don't stop the rest of the task
-		})
 		.pipe(sourcemaps.init())
-		.pipe(uglify().on('error', notify.onError()))
+		.pipe(babel({
+			presets: ['@babel/preset-env'],
+			plugins: [
+				['@babel/plugin-proposal-decorators', {
+					legacy: true
+				}]
+			]
+		}))
+		// .pipe(uglify().on('error', notify.onError()))
 		.pipe(sourcemaps.write('.'))
 		.pipe(dest('./app/js'))
 		.pipe(browserSync.stream())
@@ -155,6 +143,7 @@ const watchFiles = () => {
 
 	watch(srcFolder + '/scss/**/*.scss', styles)
 	watch(srcFolder + '/html/*.html', htmlInclude)
+	watch(srcFolder + '/njk/**/*.njk', htmlInclude)
 	watch(srcFolder + '/*.html', htmlInclude)
 	watch([`${srcFolder}/img/**/*.{png,jpg,jpeg,svg}`, `!${srcFolder}/img/svg/**/*.svg`], imgToApp)
 	watch(srcFolder + '/img/**/*.svg', svgSprites)
@@ -209,30 +198,20 @@ const stylesBuild = () => {
 }
 
 const scriptsBuild = () => {
-	return src(`${srcFolder}/js/main.js`)
-		.pipe(webpackStream({
-			mode: 'development',
-			output: {
-				filename: 'main.js',
-			},
-			module: {
-				rules: [{
-					test: /\.m?js$/,
-					exclude: /(node_modules|bower_components)/,
-					use: {
-						loader: 'babel-loader',
-						options: {
-							presets: ['@babel/preset-env']
-						}
-					}
-				}]
-			},
+	return src(`${srcFolder}/js/*.js`)
+		.pipe(fileInclude({
+			prefix: '@',
+			basepath: '@file'
 		}))
-		.on('error', function (err) {
-			console.error('WEBPACK ERROR', err);
-			this.emit('end'); // Don't stop the rest of the task
-		})
-		.pipe(uglify().on("error", notify.onError()))
+		.pipe(babel({
+			presets: ['@babel/preset-env'],
+			plugins: [
+				['@babel/plugin-proposal-decorators', {
+					legacy: true
+				}]
+			]
+		}))
+		.pipe(uglify().on('error', notify.onError()))
 		.pipe(dest('./app/js'))
 }
 

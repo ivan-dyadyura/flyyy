@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flyyy</title>
+
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/simplebar.min.css">
+	<link rel="stylesheet" href="css/franchise.min.css">
+
+	<noscript>
+		<style>
+			.simplebar-content-wrapper {
+				overflow: auto;
+			}
+		</style>
+	</noscript>
+</head>
+<body class="franchise">
+
+	{% include 'parts/menu.njk' %}
+
+	<main class="main">
+
+		{% include 'parts/hero.njk' %}
+
+		{% include 'parts/success.njk' %}
+
+		{% include 'parts/free-room.njk' %}	
+		
+		{% include 'parts/conditions.njk' %}
+
+		{% include 'parts/franchise-start.njk' %}
+
+		{% include 'parts/call.njk' %}
+
+		{% include 'parts/team.njk' %}
+
+		{% include 'parts/education-center.njk' %}
+
+		{% include 'parts/form-block.njk' %}
+
+		{% include 'parts/qna.njk' %}
+
+		{% include 'parts/contacts.njk' %}
+	</main>
+
+	{% include 'parts/footer.njk' %}
+
+	{% include 'parts/quiz.njk' %}
+	{% include 'parts/section-modal.njk' %}
+	{% include 'parts/modal-form.njk' %}
+
+	<div class="overlay"></div>
+
+	<script src="js/swiper.js"></script>
+	<script src="js/inputmask.min.js"></script>
+	<script src="js/global.js"></script>
+	<script src="js/modal.js"></script>
+	<script src="js/quiz.js"></script>
+	<script src="js/team-slider.js"></script>
+	<script src="js/education-slider.js"></script>
+	<script src="js/franchise.js"></script>
+
+</body>
+</html>

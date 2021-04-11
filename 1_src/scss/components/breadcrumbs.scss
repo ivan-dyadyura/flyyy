@@ -1,0 +1,59 @@
+.breadcrumbs {
+	display: flex;
+
+	// .breadcrumbs__item
+
+	&__item {
+		line-height: 1;
+
+		&:not(:last-child) {
+			position: relative;
+			padding-right: 26px;
+
+			&::after {
+				content: "";
+
+				position: absolute;
+				right: 8px;
+				top: 50%;
+				transform: translateY(-50%);
+
+				width: 7px;
+				height: 12px;
+
+				background-image: url(../img/icons/triangle-right.svg);
+				background-size: contain;
+				background-repeat: no-repeat;
+
+				@media (max-width: $md) {
+					width: 5px;
+					height: 10px;
+					top: 70%;
+				}
+			}
+		}
+	}
+
+	// .breadcrumbs__link
+
+	&__link {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 1;
+
+		@media (max-width: $md) {
+			font-size: 12px;
+		}
+
+		@media (max-width: $xs) {
+			font-size: 11px;
+		}
+	}
+
+	a {
+		transition: color 0.3s;
+		&:hover {
+			color: $accent-color;
+		}
+	}
+}

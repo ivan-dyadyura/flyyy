@@ -3,10 +3,9 @@
 
 	position: fixed;
 	top: 0;
-	right: 0;
+	right: -100%;
 	bottom: 0;
 	z-index: 110;
-	transform: scaleX(0);
 	transform-origin: right;
 
 	max-width: 1200px;
@@ -16,7 +15,7 @@
 
 	background-color: #fff;
 
-	transition: transform 0.3s;
+	transition: right 0.3s;
 
 	@media (max-width: $lg) {
 		max-width: 80%;
@@ -27,7 +26,8 @@
 	}
 
 	&.active {
-		transform: scaleX(1);
+		right: 0;
+		transition: right 0.4s;
 	}
 
 	// .section-modal__close
@@ -69,7 +69,11 @@
 	// .section-modal__inner
 
 	&__inner {
-		padding: 50px 125px;
+		padding: 120px 125px;
+
+		@media (max-height: 1125px) {
+			padding: 50px 125px;
+		}
 
 		@media (max-width: $lg) {
 			padding: 80px 30px 30px;
@@ -91,7 +95,11 @@
 	&__image {
 		width: 100%;
 		height: 436px;
-		margin-bottom: 50px;
+		margin-bottom: 80px;
+
+		@media (max-height: 1125px) {
+			margin-bottom: 50px;
+		}
 
 		@media (max-width: $lg) {
 			height: 300px;
@@ -149,6 +157,7 @@
 		font-weight: 700;
 		font-size: 40px;
 		line-height: 1.12;
+		text-transform: uppercase;
 
 		@media (max-width: $elg) {
 			margin-bottom: 25px;

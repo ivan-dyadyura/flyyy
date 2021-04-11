@@ -27,10 +27,13 @@ const form = () => {
 						</div>
 						<button class="btn btn--transparent quiz__final-btn">ОК</button>
 					</div>`
-					form.querySelector('.quiz__final-btn').addEventListener('click', () => {
-						quiz.classList.remove('active')
-						overlay.classList.remove('active')
-					})
+				form.querySelector('.quiz__final-btn').addEventListener('click', () => {
+					quiz.classList.remove('active')
+					overlay.classList.remove('active')
+					const html = document.querySelector('html')
+					html.style.overflow = ''
+					html.style.marginRight = `0px`
+				})
 			} else if (this.status === 404) {
 
 				console.log('Ашипка')

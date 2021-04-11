@@ -5,6 +5,7 @@ const accordion = (container, btnSelector, contentSelector, activeClass, btnActi
 		const element = containers[index]
 		const content = containers[index].querySelectorAll(contentSelector)
 		const tab = containers[index].querySelectorAll(btnSelector)
+		let lastElement = 0
 		
 		function hideTabContent() {
 			content.forEach(item => {
@@ -15,10 +16,10 @@ const accordion = (container, btnSelector, contentSelector, activeClass, btnActi
 				item.classList.remove(btnActiveClass)
 			})
 		}
-	
+
 		function showTabContent(i = 0) {
-			content[i].classList.add(activeClass)
-			tab[i].classList.add(btnActiveClass)
+			content[i].classList.toggle(activeClass)
+			tab[i].classList.toggle(btnActiveClass)
 		}
 
 		hideTabContent()
@@ -26,14 +27,18 @@ const accordion = (container, btnSelector, contentSelector, activeClass, btnActi
 
 		element.addEventListener('click', (e) => {
 			const target = e.target
-
 			if (target &&
 				target.classList.contains(btnSelector.replace(/\./, '')) ||
 				target.parentNode.classList.contains(btnSelector.replace(/\./, ''))) {
 				tab.forEach((item, i) => {
 					if (target == item || target.parentNode == item) {
-						hideTabContent()
-						showTabContent(i)
+						if (target.classList.contains(btnActiveClass) || target.parentNode.classList.contains(btnActiveClass)) {
+							console.log('yes')
+							hideTabContent()
+						} else {
+							hideTabContent()
+							showTabContent(i)
+						}
 					}
 				})
 			}
@@ -41,5 +46,3 @@ const accordion = (container, btnSelector, contentSelector, activeClass, btnActi
 	}
 
 }
-
-export default accordion
