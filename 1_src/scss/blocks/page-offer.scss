@@ -140,8 +140,12 @@
 	// .page-offer__btn
 
 	&__btn {
+		max-width: 340px;
+		width: 100%;
+		padding-right: 70px;
+
 		@media (max-width: $xs) {
-			width: 100%;
+			max-width: 100%;
 		}
 	}
 }

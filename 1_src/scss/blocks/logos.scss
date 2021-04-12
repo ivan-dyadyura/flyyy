@@ -1,0 +1,49 @@
+.logos {
+	$bg: $second-bg;
+
+	background-color: $bg;
+
+	padding: 80px 0px 95px;
+
+	// .logos__list
+
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin: 0 -35px 45px;
+	}
+
+	// .logos__item
+
+	&__item {
+		width: fit-content;
+		max-width: 400px;
+		max-height: 100px;
+		margin: 0px 35px;
+		margin-bottom: 55px;
+	}
+
+	// .logos__link
+
+	&__link {
+		display: inline-block;
+	}
+
+	// .logos__img
+
+	&__img {
+	}
+
+	// .logos__btn
+
+	&__btn {
+		max-width: 340px;
+		width: 100%;
+
+		@media (max-width: $xs) {
+			max-width: 100%;
+		}
+	}
+}

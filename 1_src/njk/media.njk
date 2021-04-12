@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flyyy | Арендодателям</title>
+
+
+	<link rel="stylesheet" href="css/simplebar.min.css">
+	<link rel="stylesheet" href="css/media.min.css">
+
+	<noscript>
+		<style>
+			.simplebar-content-wrapper {
+				overflow: auto;
+			}
+		</style>
+	</noscript>
+</head>
+<body class="franchise">
+
+
+	{% set menuType = "white" %}
+	{% include 'parts/menu.njk' %}
+
+	<main class="main">
+
+		{% set textContent =
+		'<p>
+			Мы открыты для общения и с удовольствием <br>
+			поделимся информацией связанной с запуском и <br>
+			ведением кофейного бизнеса
+		</p>'
+		%}
+		{% set textLhShorter = "true" %}
+		{% set title = "Для сми" %}
+		{% set itemsForBreadcrumbs = ['Главная', 'Для сми'] %}
+		{% include 'parts/page-heading.njk' %}
+
+		{% include 'parts/logos.njk' %}
+
+	</main>
+
+	{% include 'parts/footer.njk' %}
+	{% include 'parts/modal-form.njk' %}
+
+	<div class="overlay"></div>
+
+	<script src="js/global.js"></script>
+	<script src="js/modal.js"></script>
+	<script src="js/landlord.js"></script>
+
+</body>
+</html>

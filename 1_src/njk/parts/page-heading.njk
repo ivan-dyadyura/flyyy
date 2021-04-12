@@ -1,3 +1,6 @@
+{% if textLhShorter %}
+{% set textAdditionalClass = "page-heading__text--shorter" %}
+{% endif %}
 {% set addClass = "page-heading__breadcrumbs" %}
 {% if type2 %}
 <div class="page-heading">
@@ -36,7 +39,7 @@
 				<h1 class="title page-heading__title">
 					{{title}}
 				</h1>
-				<div class="page-heading__text">
+				<div class="page-heading__text {{textAdditionalClass}}">
 					{{ textContent | safe }}
 				</div>
 			</div>
