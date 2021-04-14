@@ -1,0 +1,75 @@
+@import "global/libs.scss";
+@import "global/vars.scss";
+@import "global/mixins.scss";
+@import "global/fonts.scss";
+@import "global/global.scss";
+@import "global/sprite.scss";
+@import "global/icons.scss";
+@import "global/anim.scss";
+
+@import "components/ui/tm-field.scss";
+@import "components/ui/btn.scss";
+@import "components/ui/tm-checkbox.scss";
+@import "components/ui/tm-checkbox-2.scss";
+@import "components/ui/tm-radio.scss";
+@import "components/ui/tm-phone.scss";
+@import "components/ui/form.scss";
+
+@import "components/menu.scss";
+@import "components/logo.scss";
+@import "components/modal-form.scss";
+@import "components/breadcrumbs.scss";
+
+@import "blocks/page-heading.scss";
+@import "blocks/free-room.scss";
+@import "blocks/footer.scss";
+
+
+.partners-success {
+	.page-heading__inner {
+		@media (min-width: 1200px) {
+			padding-bottom: 20px;
+		}
+	}
+	.free-room__title {
+		text-transform: none;
+	}
+
+	.free-room {
+		padding-top: 75px;
+
+		@media (max-width: $xs) {
+			padding: 30px 0px 50px;
+		}
+	}
+
+	.free-room__title {
+		margin-bottom: 35px;
+
+		@media (max-width: $xs) {
+			font-size: 20px;
+		}
+	}
+
+	.free-room__btn {
+		max-width: 339px;
+		width: 100%;
+	}
+
+	.free-room__inner {
+		align-items: stretch;
+	}
+
+	.free-room__list {
+		margin-bottom: 75px;
+		margin-top: 46px;
+
+		@media (max-width: $md) {
+			margin-top: 0;
+		}
+
+		@media (max-width: $xs) {
+			margin-bottom: 50px;
+		}
+	}
+}

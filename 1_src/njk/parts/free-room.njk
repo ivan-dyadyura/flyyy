@@ -1,7 +1,7 @@
 <section class="free-room" style="background-color: #343779;">
 	<div class="container">
 		<h2 class="title-2 free-room__title">
-			БЕСПЛАТНО подбираем <br> помещение для кофейни
+			{{ titleContent | safe }}
 		</h2>
 
 		<div class="free-room__inner">
@@ -18,11 +18,17 @@
 					</li>
 				</ul>
 
-				<button class="btn free-room__btn js-pupup-btn" data-modal-target="#modal1">
+				<button class="btn free-room__btn js-pupup-btn {{btnAddClass}}" data-modal-target="#modal1">
 					<span class="btn__bg">
 						<span class="btn__wave"></span>
 					</span>
-					<span class="btn__text">Подобрать помещение</span>
+					<span class="btn__text">
+						{% if freeBtnText %}
+						{{freeBtnText}}
+						{% else %}
+						Подобрать помещение
+						{% endif %}
+					</span>
 				</button>
 			</div>
 

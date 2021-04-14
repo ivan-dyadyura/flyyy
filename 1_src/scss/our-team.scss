@@ -1,0 +1,34 @@
+@import "global/libs.scss";
+@import "global/vars.scss";
+@import "global/mixins.scss";
+@import "global/fonts.scss";
+@import "global/global.scss";
+@import "global/sprite.scss";
+@import "global/icons.scss";
+@import "global/anim.scss";
+
+@import "components/ui/tm-field.scss";
+@import "components/ui/btn.scss";
+@import "components/ui/tm-checkbox.scss";
+@import "components/ui/tm-checkbox-2.scss";
+@import "components/ui/tm-radio.scss";
+@import "components/ui/tm-phone.scss";
+@import "components/ui/form.scss";
+
+@import "components/menu.scss";
+@import "components/logo.scss";
+@import "components/modal-form.scss";
+@import "components/breadcrumbs.scss";
+@import "components/circle-picture.scss";
+
+@import "blocks/page-heading.scss";
+@import "blocks/block-team.scss";
+@import "blocks/footer.scss";
+
+.our-team {
+	.page-heading__inner {
+		@media (min-width: 1200px) {
+			padding-bottom: 30px;
+		}
+	}
+}

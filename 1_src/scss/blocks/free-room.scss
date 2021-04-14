@@ -119,6 +119,10 @@
 	// .free-room__btn
 
 	&__btn {
+		@media (max-width: $xs) {
+			max-width: 100%;
+			width: 100%;
+		}
 	}
 
 	// .free-room__image
@@ -129,6 +133,7 @@
 		@media (max-width: $lg) {
 			max-width: 700px;
 			width: 100%;
+			object-fit: contain;
 		}
 		
 		@media (max-width: $md) {

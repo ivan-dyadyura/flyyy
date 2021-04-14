@@ -1,29 +1,29 @@
 {% if textLhShorter %}
 {% set textAdditionalClass = "page-heading__text--shorter" %}
 {% endif %}
+{% if textLhLarger %}
+{% set textAdditionalClass = "page-heading__text--larger" %}
+{% endif %}
 {% set addClass = "page-heading__breadcrumbs" %}
 {% if type2 %}
 <div class="page-heading">
 	<div class="container">
 		<div class="page-heading__inner">
-			<ul class="breadcrumbs page-heading__breadcrumbs">
-
-				<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
-				<li class="breadcrumbs__item"><span class="breadcrumbs__link">Арендодателям</span></li>
-			</ul>
+			{% include 'parts/components/breadcrumbs.njk' %}
 			<div class="page-heading__row">
 				<div class="page-heading__content">
 					<h1 class="title page-heading__title">
-						{{title}}
+						{{title | safe}}
 					</h1>
-					<div class="page-heading__text">
+					<div class="page-heading__text {{textAdditionalClass}}">
 						{{ textContent | safe }}
 					</div>
 				</div>
-				<div class="page-heading__list">
-					<li class="page-heading__item"><a class="page-heading__link" href="">Напитки</a></li>
-					<li class="page-heading__item"><a class="page-heading__link" href="">Еда</a></li>
-				</div>
+				<ul class="page-heading__list">
+					{% for item in itemsForMenu %}
+					<li class="page-heading__item"><a class="page-heading__link" href="#scroll-{{loop.index}}">{{item}}</a></li>
+					{% endfor %}
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -37,7 +37,7 @@
 			<div class="page-heading__content">
 				{% include 'parts/components/breadcrumbs.njk' %}
 				<h1 class="title page-heading__title">
-					{{title}}
+					{{title | safe}}
 				</h1>
 				<div class="page-heading__text {{textAdditionalClass}}">
 					{{ textContent | safe }}

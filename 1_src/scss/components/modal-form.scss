@@ -13,6 +13,7 @@
 	transition: top 0.3s;
 
 	&.active {
+		z-index: 110;
 		top: 50%;
 	}
 

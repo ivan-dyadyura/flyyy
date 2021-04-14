@@ -5,6 +5,11 @@
 
 	padding: 80px 0px 95px;
 
+	@media (max-width: $xs) {
+		padding-bottom: 50px;
+		padding-top: 30px;
+	}
+
 	// .logos__list
 
 	&__list {
@@ -13,6 +18,20 @@
 		justify-content: space-between;
 		flex-wrap: wrap;
 		margin: 0 -35px 45px;
+
+		@media (max-width: $md) {
+			margin-left: -20px;
+			margin-right: -20px;
+		}
+
+		@media (max-width: $xs) {
+			margin: 0 -15px 10px;
+		}
+
+		&::after {
+			content: "";
+			flex: auto;
+		}
 	}
 
 	// .logos__item
@@ -23,6 +42,16 @@
 		max-height: 100px;
 		margin: 0px 35px;
 		margin-bottom: 55px;
+
+		@media (max-width: $md) {
+			max-width: 33%;
+			margin: 0 20px 55px;
+		}
+
+		@media (max-width: $xs) {
+			min-width: calc(50% - 30px);
+			margin: 0 15px 40px;
+		}
 	}
 
 	// .logos__link

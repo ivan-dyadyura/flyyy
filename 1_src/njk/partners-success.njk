@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flyyy | Поиск помещения</title>
+
+
+	<link rel="stylesheet" href="css/simplebar.min.css">
+	<link rel="stylesheet" href="css/partners-success.min.css">
+
+	<noscript>
+		<style>
+			.simplebar-content-wrapper {
+				overflow: auto;
+			}
+		</style>
+	</noscript>
+</head>
+<body class="partners-success">
+
+
+	{% set menuType = "white" %}
+	{% include 'parts/menu.njk' %}
+
+	<main class="main">
+
+		{% set textContent =
+		'<p>
+			Поэтому мы подбираем помещения <br>
+			для партнеров БЕСПЛАТНО!
+		</p>'
+		%}
+		{% set textLhShorter = "true" %}
+		{% set title = "успех партнеров <br> наш успех!" %}
+		{% set itemsForBreadcrumbs = ['Главная', 'Поиск помещения'] %}
+		{% include 'parts/page-heading.njk' %}
+
+		
+		{% set titleContent = 'Ежедневно оцениваем <br> 3-5 локаций' %}
+		{% set btnAddClass = 'btn--transparent btn--white' %}
+		{% set freeBtnText = 'Оставить заявку' %}
+		{% include 'parts/free-room.njk' %}
+
+	</main>
+
+	{% include 'parts/footer.njk' %}
+	{% include 'parts/modal-form.njk' %}
+
+	<div class="overlay"></div>
+
+	<script src="js/global.js"></script>
+	<script src="js/modal.js"></script>
+	<script src="js/landlord.js"></script>
+
+</body>
+</html>

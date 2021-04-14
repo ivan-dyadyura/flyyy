@@ -1,6 +1,5 @@
 @include('plugins/simplebar.min.js')
 
-@include('functions/dynamic-adaptive.js')
 @include('components/anim.js')
 @include('functions/phone.js')
 @include('functions/form-send.js')

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flyyy | Наша команда</title>
+
+
+	<link rel="stylesheet" href="css/simplebar.min.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/service.min.css">
+	<link rel="stylesheet" href="css/coffe-formats.min.css">
+
+	<noscript>
+		<style>
+			.simplebar-content-wrapper {
+				overflow: auto;
+			}
+		</style>
+	</noscript>
+</head>
+<body class="coffe-formats">
+
+
+	{% set menuType = "white" %}
+	{% include 'parts/menu.njk' %}
+
+	<main class="main">
+
+		{% set textContent =
+		'<p>
+			При выборе мест для кофейни мы рассматриваем разные <br>
+			локации и форматы кофеен могут отличатся, а также инвестиции. <br>
+			Выбирете свой формат
+		</p>'
+		%}
+		{% set type2 = "true" %}
+		{% set title = "Форматы <br> кофеен" %}
+		{% set itemsForMenu = ['Кофе-точка', 'Стандарт', 'Кофейня'] %}
+		{% set itemsForBreadcrumbs = ['Главная', 'Форматы кофеен'] %}
+		{% set textLhLarger = true %}
+		{% include 'parts/page-heading.njk' %}
+
+
+		{% set title = "Кофе-точка" %}
+		{% set arrList =[
+		{name: 'Инвестиции', value: 'от 900 т. р.'},
+		{name: 'Формат', value: 'Окно/павильон <br> 4-10м2'}
+		]%}
+		{% set idScroll = 'scroll-1' %}
+		{% include 'parts/service.njk' %}
+
+
+
+		{% set title = "Стандарт" %}
+		{% set arrList =[
+		{name: 'Инвестиции', value: 'от 1200 т. р.'},
+		{name: 'Формат', value: 'Остров 9-23м2'}
+		]%}
+		{% set idScroll = 'scroll-2' %}
+		{% include 'parts/service.njk' %}
+
+
+
+		{% set title = "Кофейня" %}
+		{% set arrList =[
+		{name: 'Инвестиции', value: 'от 1500 т. р.'},
+		{name: 'Формат', value: 'Кофейня с посадкой/без посадки <br> 20-50м2'}
+		]%}
+		{% set idScroll = 'scroll-3' %}
+		{% include 'parts/service.njk' %}
+
+
+
+	</main>
+
+	{% include 'parts/footer.njk' %}
+	{% include 'parts/modal-form.njk' %}
+
+	<div class="overlay"></div>
+
+	<script src="js/global.js"></script>
+	<script src="js/swiper.js"></script>
+	<script src="js/service-slider.js"></script>
+	<script src="js/coffe-formats.js"></script>
+
+</body>
+</html>

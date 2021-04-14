@@ -5,6 +5,7 @@ function bindModal(triggerSelector, isOverlayClickable) {
 
 
 	const html = document.querySelector('html')
+	const body = document.querySelector('html')
 
 	trigger.forEach(item => {
 		let modalSel = item.getAttribute('data-modal-target')
@@ -16,7 +17,7 @@ function bindModal(triggerSelector, isOverlayClickable) {
 				modal.classList.remove('active')
 				overlay.classList.remove('active')
 				html.style.overflow = ''
-				html.style.marginRight = `0px`
+				body.style.marginRight = `0px`
 				overlay.classList.remove('active')
 			})
 		}
@@ -29,7 +30,7 @@ function bindModal(triggerSelector, isOverlayClickable) {
 			modal.classList.add('active')
 			overlay.classList.add('active')
 			html.style.overflow = 'hidden'
-			html.style.marginRight = `${scroll}px`
+			body.style.marginRight = `${scroll}px`
 			overlay.classList.add('active')
 		})
 
@@ -37,7 +38,7 @@ function bindModal(triggerSelector, isOverlayClickable) {
 			modal.classList.remove('active')
 			overlay.classList.remove('active')
 			html.style.overflow = ''
-			html.style.marginRight = `0px`
+			body.style.marginRight = `0px`
 			overlay.classList.remove('active')
 		})
 	})

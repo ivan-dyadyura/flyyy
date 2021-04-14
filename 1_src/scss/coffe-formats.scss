@@ -1,0 +1,59 @@
+@import "global/libs.scss";
+@import "global/vars.scss";
+@import "global/mixins.scss";
+@import "global/fonts.scss";
+@import "global/global.scss";
+@import "global/sprite.scss";
+@import "global/icons.scss";
+@import "global/anim.scss";
+
+@import "components/ui/tm-field.scss";
+@import "components/ui/btn.scss";
+@import "components/ui/tm-checkbox.scss";
+@import "components/ui/tm-checkbox-2.scss";
+@import "components/ui/tm-radio.scss";
+@import "components/ui/tm-phone.scss";
+@import "components/ui/form.scss";
+
+@import "components/menu.scss";
+@import "components/logo.scss";
+@import "components/modal-form.scss";
+@import "components/breadcrumbs.scss";
+@import "components/circle-picture.scss";
+
+@import "blocks/page-heading.scss";
+@import "blocks/footer.scss";
+
+.coffe-formats {
+	.main {
+		background-color: $second-bg;
+		padding-bottom: 25px;
+
+		@media (max-width: $md) {
+			padding-bottom: 60px;
+		}
+
+		@media (max-width: $sm) {
+			padding-bottom: 20px;
+		}
+	}
+
+	.service {
+		&:not(:last-child) {
+			.service__inner {
+				border-bottom: 1px solid rgba(#fff, 0.15);
+
+				@media (max-width: $sm) {
+					border: none;
+				}
+			}
+		}
+	}
+
+	.page-heading__inner {
+		@media (max-width: $sm) {
+			border-bottom: 0;
+			padding-bottom: 30px;
+		}
+	}
+}

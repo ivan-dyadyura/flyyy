@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flyyy | Наша команда</title>
+
+
+	<link rel="stylesheet" href="css/simplebar.min.css">
+	<link rel="stylesheet" href="css/our-team.min.css">
+
+	<noscript>
+		<style>
+			.simplebar-content-wrapper {
+				overflow: auto;
+			}
+		</style>
+	</noscript>
+</head>
+<body class="our-team">
+
+
+	{% set menuType = "white" %}
+	{% include 'parts/menu.njk' %}
+
+	<main class="main">
+
+		{% set textContent =
+		'<p>
+			Для успешного запуска и работы кофейни нужна профессилональная поддержка партнеров <br>
+			(франчайзи). В команде FlyCoffee собраны лучшие специалисты кофеной индустрии, что <br>
+			обеспечивает качественную поддержку франчайзи на каждом этапе деятельности.
+		</p>'
+		%}
+		{% set title = "Наша команда - наша гордость!" %}
+		{% set itemsForBreadcrumbs = ['Главная', 'Команда'] %}
+		{% set textLhLarger = true %}
+		{% include 'parts/page-heading.njk' %}
+
+		{% include 'parts/block-team.njk' %}
+
+	</main>
+
+	{% include 'parts/footer.njk' %}
+	{% include 'parts/modal-form.njk' %}
+
+	<div class="overlay"></div>
+
+	<script src="js/global.js"></script>
+
+</body>
+</html>
