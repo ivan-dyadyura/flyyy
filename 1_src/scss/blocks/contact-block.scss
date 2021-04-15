@@ -1,0 +1,156 @@
+.contact-block {
+	$bg: $second-bg;
+
+	background-color: $bg;
+
+	// .contact-block__inner
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		padding: 80px 0;
+	}
+
+	// .contact-block__map
+
+	&__map {
+		max-width: 679px;
+		width: 100%;
+		margin-right: 42px;
+
+		iframe {
+			width: 100%;
+			height: 585px;
+		}
+	}
+
+	// .contact-block__content
+
+	&__content {
+		width: 100%;
+	}
+
+	// .contact-block__header
+
+	&__header {
+	}
+
+	// .contact-block__place
+
+	&__place {
+	}
+
+	// .contact-block__search
+
+	&__search {
+	}
+
+	// .contact-block__input
+
+	&__input {
+	}
+
+	// .contact-block__btn
+
+	&__btn {
+	}
+
+	// .contact-block__list
+
+	&__list {
+		
+	}
+
+	// .contact-block__item
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		padding: 24px 28px 24px 45px;
+
+		border-bottom: 2px solid rgba(#fff, 0.1);
+	}
+
+	// .contact-block__position
+
+	&__position {
+		max-width: 240px;
+
+		font-weight: 500;
+		font-size: 17px;
+		line-height: 1.47;
+	}
+
+	// .contact-block__city
+
+	&__city {
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: -25px;
+			top: 5px;
+
+			width: 9px;
+			height: 12px;
+
+			background-image: url(../img/icons/map.svg);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+
+	// .contact-block__stop
+
+	&__stop {
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: -25px;
+			top: 5px;
+
+			width: 12px;
+			height: 9px;
+
+			background-image: url(../img/icons/metro.svg);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+
+	// .contact-block__data
+
+	&__data {
+	}
+
+	// .contact-block__link
+
+	&__link {
+		margin-bottom: 15px;
+
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 1;
+		text-align: right;
+
+		transition: color 0.3s;
+
+		&:hover {
+			color: $accent-color;
+		}
+	}
+
+	// .contact-block__time
+
+	&__time {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 1.25;
+		text-align: right;
+	}
+}

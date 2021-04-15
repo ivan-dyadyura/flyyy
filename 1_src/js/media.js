@@ -1,0 +1,1 @@
+bindModal('.logos__btn', true)

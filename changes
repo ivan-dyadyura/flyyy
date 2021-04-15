@@ -1,10 +1,38 @@
 JS
 1. Добавлен файл smooth-scroll в папку functions для плавного скролла по якорям
 2. В корне файлы coffe-formats и service-slide (для слайдера форматы кофеен)
-
+3. media.js файл для страницы сми
+4. Также убраны addEventListener('DOMContentLoaded') в файлах JS
 
 CSS добавлены новые файлы
 1. coffe-formats
 2. our-team
 3. partners-success
 4. service (стили для слайдера форматы кофеен)
+
+Готовые страницы
+1. index.njk - франшиза
+2. coffe-formats.njk - форматы кофеен
+3. media.njk - для СМИ
+4. our-team.njk - команда
+5. partners-success.njk - подбор помещения
+6. landlord - арендодателям
+
+15.04.2021
+
+JS
+1.
+
+
+CSS добавлены новые файлы
+1. chart.scss
+
+Готовые страницы
+1. index.njk - франшиза
+2. coffe-formats.njk - форматы кофеен
+3. media.njk - для СМИ
+4. our-team.njk - команда
+5. partners-success.njk - подбор помещения
+6. landlord - арендодателям
+7. development-plan - план развития сети
+8. 
