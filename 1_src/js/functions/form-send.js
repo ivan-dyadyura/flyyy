@@ -28,6 +28,7 @@ const form = () => {
 	
 			let data = new FormData(form)
 			let dataPost
+
 	
 			// Формируем массив данных для отправки 
 			data.forEach(function (value, key) {

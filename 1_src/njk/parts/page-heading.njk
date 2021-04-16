@@ -15,9 +15,25 @@
 					<h1 class="title page-heading__title">
 						{{title | safe}}
 					</h1>
+					{% if phSubtitle %}
+					<div class="page-heading__subtitle">{{phSubtitle}}</div>
+					{% endif %}
+
+					{% if phListHead %}
+					<ul class="page-heading__content-list">
+						{% for item in phListHead %}
+						<li class="page-heading__content-item"></li>
+						{% endfor %}
+					</ul>
+					{% endif %}
+					
+
+					{% if textContent %}
 					<div class="page-heading__text {{textAdditionalClass}}">
 						{{ textContent | safe }}
 					</div>
+					{% endif %}
+
 				</div>
 				<ul class="page-heading__list">
 					{% for item in itemsForMenu %}
@@ -39,9 +55,23 @@
 				<h1 class="title page-heading__title">
 					{{title | safe}}
 				</h1>
+				{% if phSubtitle %}
+				<div class="page-heading__subtitle">{{phSubtitle}}</div>
+				{% endif %}
+
+				{% if phListHead %}
+				<ul class="page-heading__content-list">
+					{% for item in phListHead %}
+					<li class="page-heading__content-item">{{item}}</li>
+					{% endfor %}
+				</ul>
+				{% endif %}
+
+				{% if textContent %}
 				<div class="page-heading__text {{textAdditionalClass}}">
 					{{ textContent | safe }}
 				</div>
+				{% endif %}
 			</div>
 
 		</div>

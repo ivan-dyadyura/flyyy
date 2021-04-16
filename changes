@@ -18,7 +18,7 @@ CSS добавлены новые файлы
 5. partners-success.njk - подбор помещения
 6. landlord - арендодателям
 
-15.04.2021
+16.04.2021
 
 JS
 1.
@@ -26,6 +26,8 @@ JS
 
 CSS добавлены новые файлы
 1. chart.scss
+2. addresses.scss
+	- .contact-block__dropdown-list - это выпадающий блок поиска, для его отображения можно добавить класс active
 
 Готовые страницы
 1. index.njk - франшиза
@@ -35,4 +37,4 @@ CSS добавлены новые файлы
 5. partners-success.njk - подбор помещения
 6. landlord - арендодателям
 7. development-plan - план развития сети
-8. 
+8. addresses - адреса кофеен

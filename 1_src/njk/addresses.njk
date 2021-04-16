@@ -27,8 +27,15 @@
 	<main class="main">
 
 		{% set title = "Адреса кофеен <br> FlyCoffee" %}
-		{% set itemsForBreadcrumbs = ['Главная', 'План развития'] %}
+		{% set itemsForBreadcrumbs = ['Главная', 'Адреса кофеен'] %}
 		{% set textLhLarger = true %}
+		{% set phSubtitle = 'Fly Coffee — Федеральная сеть креативных кофеен с фиксированными ценами!' %}
+		{% set phListHead = [
+		'Наши цены в кофей нях от 60₽',
+		'Наш девиз One Love One Price',
+		'Наши кофейни используют cвежеобжаренное SPECIALTY зерно',
+		'Каждое утро ТОЛЬКО свежая выпечка'
+		] %}
 		{% include 'parts/page-heading.njk' %}
 
 		{% include 'parts/contact-block.njk' %}
@@ -41,6 +48,7 @@
 	<div class="overlay"></div>
 
 	<script src="js/global.js"></script>
+	<script src="js/select.js"></script>
 
 </body>
 </html>

@@ -2,25 +2,102 @@
 	<div class="container">
 		<div class="contact-block__inner">
 			<div class="contact-block__map">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d37494223.239094906!2d103!3d55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1618503576264!5m2!1sru!2sru"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d37494223.239094906!2d103!3d55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1618503576264!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 			</div>
 
 			<div class="contact-block__content">
-				<form class="contact-block__header">
-					<select name="select-city" id="select-city" class="contact-block__place">
-						<option value="Moscow">Москва</option>
-						<option value="Irkutsk">Иркутск</option>
-					</select>
-					<label class="contact-block__search">
-						<span class="visually-hidden">Поиск города</span>
-						<input type="text" class="contact-block__input">
-					</label>
-					<button class="contact-block__btn">
-						<span class="visually-hidden">Найти город</span>
-					</button>
-				</form>
+				<div class="contact-block__header">
+					<form class="contact-block__select-form">
+						<div class="select contact-block__select">
+							<div class="select__header">
+								<span class="select__current">Москва</span>
+								<div class="select__icon">
+									<svg>
+										<use xlink:href="img/svg/sprite1.svg#triangle-down" />
+									</svg>
+								</div>
+							</div>
+							<div class="select__body" data-simplebar>
+								<div class="select__item">Москва</div>
+								<div class="select__item">Питер</div>
+								<div class="select__item">Иркутск</div>
+								<div class="select__item">Калифорния</div>
+								<div class="select__item">Токио</div>
+								<div class="select__item">Санк Петербург</div>
+								<div class="select__item">Калифорния</div>
+								<div class="select__item">Токио</div>
+							</div>
+							<input class="select__input" type="text" name="select-result" value="Москва" hidden>
+						</div>
+					</form>
+					<form class="contact-block__search-form">
+						<label class="contact-block__search">
+							<span class="vissually-hidden">Поиск города</span>
+							<input type="text" class="contact-block__input" name="search-city" autocomplete="off">
+						</label>
+						<ul class="contact-block__dropdown-list active">
+							<li class="contact-block__dropdown-item">
+								<span class="contact-block__dropdown-text">
+									<b>Сара</b>товская область
+								</span>
+							</li>
+							<li class="contact-block__dropdown-item">
+								<span class="contact-block__dropdown-text">
+									<b>Сара</b>нск
+								</span>
+							</li>
+							<li class="contact-block__dropdown-item">
+								<span class="contact-block__dropdown-text">
+									<b>Сара</b>товская
+								</span>
+								<span class="contact-block__dropdown-ghost">Краснодарский край</span>
+							</li>
+						</ul>
+						<button class="contact-block__btn">
+							<img src="img/icons/search.svg" alt="">
+							<span class="vissually-hidden">Найти город</span>
+						</button>
+					</form>
+				</div>
+
 
 				<ul class="contact-block__list">
+					<li class="contact-block__item">
+						<div class="contact-block__position">
+							<div class="contact-block__city">Москва</div>
+							<div class="contact-block__stop">Метро Какое то, <br> Волгоградский проспект, 43</div>
+						</div>
+
+						<div class="contact-block__data">
+							<a href="tel:88007079113" class="contact-block__link">8 (800) 707-91-13</a>
+							<div class="contact-block__time">08:00-21:00</div>
+						</div>
+					</li>
+
+					<li class="contact-block__item">
+						<div class="contact-block__position">
+							<div class="contact-block__city">Москва</div>
+							<div class="contact-block__stop">Метро Какое то, <br> Волгоградский проспект, 43</div>
+						</div>
+
+						<div class="contact-block__data">
+							<a href="tel:88007079113" class="contact-block__link">8 (800) 707-91-13</a>
+							<div class="contact-block__time">08:00-21:00</div>
+						</div>
+					</li>
+
+					<li class="contact-block__item">
+						<div class="contact-block__position">
+							<div class="contact-block__city">Москва</div>
+							<div class="contact-block__stop">Метро Какое то, <br> Волгоградский проспект, 43</div>
+						</div>
+
+						<div class="contact-block__data">
+							<a href="tel:88007079113" class="contact-block__link">8 (800) 707-91-13</a>
+							<div class="contact-block__time">08:00-21:00</div>
+						</div>
+					</li>
+
 					<li class="contact-block__item">
 						<div class="contact-block__position">
 							<div class="contact-block__city">Москва</div>

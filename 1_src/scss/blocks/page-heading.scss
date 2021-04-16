@@ -156,6 +156,43 @@
 		}
 	}
 
+	// .page-heading__subtitle
+
+	&__subtitle {
+		margin-bottom: 50px;
+
+		font-weight: 500;
+		font-size: 40px;
+		line-height: 1;
+	}
+
+	// .page-heading__content-list
+
+	&__content-list {
+		font-size: 20px;
+		line-height: 1.75;
+		margin-bottom: 30px;
+	}
+
+	// .page-heading__content-item
+
+	&__content-item {
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: -15px;
+			top: 50%;
+			transform: translateY(-50%);
+
+			width: 5px;
+			height: 2px;
+
+			background-color: #51E2F2;
+		}
+	}
+
 	// .page-heading__text
 
 	&__text {
