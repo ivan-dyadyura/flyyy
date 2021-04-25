@@ -3,6 +3,19 @@
 
 	background-color: $bg;
 
+	&--light {
+		background-color: #fff;
+		color: $bg;
+
+		.page-heading__title {
+			color: $bg;
+		}
+
+		.breadcrumbs__item::after {
+			background-color: $bg;
+		}
+	}
+
 	// .page-heading__inner
 
 	&__inner {
@@ -164,6 +177,11 @@
 		font-weight: 500;
 		font-size: 40px;
 		line-height: 1;
+
+		@media (max-width: $md) {
+			margin-bottom: 20px;
+			font-size: 20px;
+		}
 	}
 
 	// .page-heading__content-list
@@ -172,6 +190,16 @@
 		font-size: 20px;
 		line-height: 1.75;
 		margin-bottom: 30px;
+
+		@media (max-width: $md) {
+			font-size: 12px;
+			line-height: 25px;
+			margin-bottom: 20px;
+		}
+
+		@media (max-width: $xs) {
+			margin-bottom: 10px;
+		}
 	}
 
 	// .page-heading__content-item

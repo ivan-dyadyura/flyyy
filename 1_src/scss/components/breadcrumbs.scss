@@ -21,9 +21,14 @@
 				width: 7px;
 				height: 12px;
 
-				background-image: url(../img/icons/triangle-right.svg);
-				background-size: contain;
-				background-repeat: no-repeat;
+				mask-image: url(../img/icons/triangle-right.svg);
+				mask-repeat: no-repeat;
+				background-color: #fff;
+				mask-size: contain;
+
+				@media (max-width: $lg) {
+					top: 60%;
+				}
 
 				@media (max-width: $md) {
 					width: 5px;

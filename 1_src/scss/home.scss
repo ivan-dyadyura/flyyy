@@ -1,0 +1,56 @@
+@import "global/libs.scss";
+@import "global/vars.scss";
+@import "global/mixins.scss";
+@import "global/fonts.scss";
+@import "global/global.scss";
+@import "global/sprite.scss";
+@import "global/icons.scss";
+@import "global/anim.scss";
+
+@import "components/ui/tm-field.scss";
+@import "components/ui/btn.scss";
+@import "components/ui/tm-checkbox.scss";
+@import "components/ui/tm-checkbox-2.scss";
+@import "components/ui/tm-radio.scss";
+@import "components/ui/tm-phone.scss";
+@import "components/ui/select.scss";
+@import "components/ui/form.scss";
+
+@import "components/menu.scss";
+@import "components/logo.scss";
+@import "components/modal-form.scss";
+@import "components/breadcrumbs.scss";
+@import "components/circle.scss";
+@import "components/circle-picture.scss";
+@import "components/filter.scss";
+@import "components/article.scss";
+
+@import "blocks/page-heading.scss";
+@import "blocks/article-block.scss";
+@import "blocks/hero-slider.scss";
+@import "blocks/choice.scss";
+@import "blocks/footer.scss";
+
+.home-page {
+	.filter {
+		padding-top: 70px;
+		padding-bottom: 50px;
+
+		@media (max-width: $sm) {
+			padding: 40px 0 30px;
+		}
+	}
+
+	.article-block__title {
+		margin-bottom: 0;
+	}
+
+	.main {
+		padding-bottom: 95px;
+		background-color: $second-bg;
+
+		@media (max-width: $sm) {
+			padding-bottom: 50px;
+		}
+	}
+}

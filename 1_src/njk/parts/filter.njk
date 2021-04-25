@@ -1,0 +1,15 @@
+{% if filterLight %}
+{% set filterClass = 'filter--light' %}
+{% endif %}
+
+<div class="filter {{filterClass}}">
+	<div class="container">
+		<ul class="filter__list">
+			{% for item in filterList %}
+			<li class="filter__item">
+				<a class="filter__link" href="">{{item}}</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>

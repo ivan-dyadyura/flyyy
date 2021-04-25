@@ -96,26 +96,28 @@
 
 		.tm-i-instagram,
 		.tm-i-vk {
-			&:hover {
+			@media (max-width: $full) {
+				&:hover {
+					circle {
+						fill: #343779;
+					}
+			
+					path {
+						fill: #fff;
+					}
+				}
+			
 				circle {
-					fill: #343779;
+					stroke: rgba(#343779, 0.12);
+					fill: transparent;
+					transition: fill 0.3s;
 				}
-		
+			
 				path {
-					fill: #fff;
+					fill: #343779;
+			
+					transition: all 0.3s;
 				}
-			}
-		
-			circle {
-				stroke: rgba(#343779, 0.12);
-				fill: transparent;
-				transition: fill 0.3s;
-			}
-		
-			path {
-				fill: #343779;
-		
-				transition: all 0.3s;
 			}
 		}
 	}

@@ -8,7 +8,7 @@
 
 
 	<link rel="stylesheet" href="css/simplebar.min.css">
-	<link rel="stylesheet" href="css/landlord.min.css">
+	<link rel="stylesheet" href="css/coffe.min.css">
 
 	<noscript>
 		<style>
@@ -18,7 +18,7 @@
 		</style>
 	</noscript>
 </head>
-<body class="franchise">
+<body class="coffe-menu-page">
 
 
 	{% set menuType = "white" %}
@@ -34,7 +34,7 @@
 		%}
 		{% set title = "МЕНЮ кофеен FlyCoffee" %}
 		{% set type2 = true %}
-		{% set itemsForMenu = ['Еда', 'Напитки'] %}
+		{% set itemsForMenu = ['Напитки', 'Еда'] %}
 		{% set itemsForBreadcrumbs = ['Главная', 'Меню кофеен'] %}
 		{% include 'parts/page-heading.njk' %}
 
@@ -48,6 +48,7 @@
 	<div class="overlay"></div>
 
 	<script src="js/global.js"></script>
+	<script src="js/coffe.js"></script>
 
 </body>
 </html>

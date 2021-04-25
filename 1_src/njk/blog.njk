@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flyyy | Блог</title>
+
+
+	<link rel="stylesheet" href="css/simplebar.min.css">
+	<link rel="stylesheet" href="css/blog.min.css">
+
+	<noscript>
+		<style>
+			.simplebar-content-wrapper {
+				overflow: auto;
+			}
+		</style>
+	</noscript>
+</head>
+<body class="page-blog">
+
+
+
+	{% include 'parts/menu.njk' %}
+
+	<main class="main">
+
+		{% set title = "Блог" %}
+
+		{% set itemsForBreadcrumbs = ['Главная', 'Блог'] %}
+		{% set textContent = 'Все актульные события связанные <br> с жизнью нашего проекта' %}
+		{% set textLhShorter = true %}
+		{% set pageAddClass = 'page-heading--light' %}
+		{% include 'parts/page-heading.njk' %}
+
+		{% set filterList = ['Все', 'Бизнес блог', 'Новости'] %}
+		{% include 'parts/filter.njk' %}
+
+		{% include 'parts/article-block.njk' %}
+
+	</main>
+
+	{% set footerLight = true %}
+	{% include 'parts/footer.njk' %}
+	{% include 'parts/modal-form.njk' %}
+
+	<div class="overlay"></div>
+
+	<script src="js/global.js"></script>
+	<script src="js/select.js"></script>
+
+</body>
+</html>

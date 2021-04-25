@@ -1,0 +1,16 @@
+.breadcrumbs-heading {
+	padding-top: 183px;
+	padding-bottom: 50px;
+
+	background-color: $second-bg;
+
+	@media (max-width: $md) {
+		padding-top: 114px;
+		padding-bottom: 35px;
+	}
+
+	@media (max-width: $xs) {
+		padding-top: 75px;
+		padding-bottom: 20px;
+	}
+}

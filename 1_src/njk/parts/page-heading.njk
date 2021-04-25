@@ -6,7 +6,7 @@
 {% endif %}
 {% set addClass = "page-heading__breadcrumbs" %}
 {% if type2 %}
-<div class="page-heading">
+<div class="page-heading {{pageAddClass}}">
 	<div class="container">
 		<div class="page-heading__inner">
 			{% include 'parts/components/breadcrumbs.njk' %}
@@ -47,7 +47,7 @@
 
 
 {% else %}
-<div class="page-heading">
+<div class="page-heading {{pageAddClass}}">
 	<div class="container">
 		<div class="page-heading__inner">
 			<div class="page-heading__content">
